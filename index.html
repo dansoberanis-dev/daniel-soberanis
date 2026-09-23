@@ -1,0 +1,1097 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Daniel Soberanis | Webdesigner e Especialista em Google Meu Negócio</title>
+<meta name="description" content="Portfólio de Daniel Soberanis. Criação de sites profissionais, responsivos e otimizados para SEO, gestão de redes sociais e especialista em Google Meu Negócio." />
+<meta name="author" content="Daniel Soberanis" />
+<meta name="robots" content="index,follow,max-image-preview:large" />
+<meta name="theme-color" content="#0E0C07" />
+<meta name="geo.region" content="BR-PR" />
+<meta name="geo.placename" content="Curitiba, Paraná" />
+
+<!-- ===== COMPARTILHAMENTO (WhatsApp, Instagram, Facebook, LinkedIn) =====
+     Os enderecos absolutos usam o token __SITE_URL__. Antes de publicar, rode:
+         python3 deploy/preparar.py https://seu-endereco.vercel.app
+     Isso grava a URL final no canonical, no og:url e nas imagens. -->
+<link rel="canonical" href="__SITE_URL__/" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="pt_BR" />
+<meta property="og:site_name" content="Daniel Soberanis" />
+<meta property="og:title" content="Daniel Soberanis | Webdesigner e Especialista em Google Meu Negócio" />
+<meta property="og:description" content="Portfólio de Daniel Soberanis. Criação de sites profissionais, responsivos e otimizados para SEO, gestão de redes sociais e especialista em Google Meu Negócio." />
+<meta property="og:url" content="__SITE_URL__/" />
+<meta property="og:image" content="__SITE_URL__/assets/og-image.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Daniel Soberanis — webdesigner e especialista em Google Meu Negócio" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Daniel Soberanis | Webdesigner e Especialista em Google Meu Negócio" />
+<meta name="twitter:description" content="Portfólio de Daniel Soberanis. Criação de sites profissionais, responsivos e otimizados para SEO, gestão de redes sociais e especialista em Google Meu Negócio." />
+<meta name="twitter:image" content="__SITE_URL__/assets/og-image.jpg" />
+
+<!-- ===== FAVICON (monograma recortado da sua logo) ===== -->
+<link rel="icon" href="assets/favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png" />
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Syne:wght@500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    /* Tokens extraídos da og:image do build v2 */
+    --background:#0E0C07;
+    --foreground:#F2EFE6;
+    --muted:#A29C92;
+    --line:rgba(242,239,230,.12);
+    --surface:#16130C;
+    --card:#1B1810;
+    --primary:#DED800;
+    --primary-foreground:#0E0C07;
+    --display:"Syne","Syne Fallback",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    --sans:"Manrope","Manrope Fallback",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    --pad:1.25rem;
+    --maxw:1380px;
+  }
+  @media (min-width:768px){:root{--pad:2.5rem}}
+  *,*::before,*::after{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+  body{margin:0;background:var(--background);color:var(--foreground);font-family:var(--sans);font-weight:400;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  img{max-width:100%;display:block}
+  body{overflow-wrap:break-word}
+  a{color:inherit;text-decoration:none}
+  :focus-visible{outline:2px solid var(--primary);outline-offset:3px}
+  .skip-link{position:fixed;left:1rem;top:-5rem;z-index:90;background:var(--primary);color:var(--primary-foreground);padding:.875rem 1.5rem;font-weight:600;transition:top .25s ease}
+  .skip-link:focus{top:1rem}
+  ::selection{background:var(--primary);color:var(--primary-foreground)}
+  .wrap{width:100%;max-width:var(--maxw);margin-inline:auto}
+  .display-type{font-family:var(--display);font-weight:600;letter-spacing:-.02em}
+  .eyebrow{margin:0 0 1rem;font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.18em;color:var(--primary)}
+
+  /* ---------- grain ---------- */
+  .grain{position:relative}
+  .grain::after{
+    content:"";position:fixed;inset:0;z-index:40;pointer-events:none;opacity:.05;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* ---------- Header ---------- */
+  .site-header{position:fixed;inset-inline:0;top:0;z-index:50;border-bottom:1px solid transparent;background:transparent;transition:background-color .45s ease,border-color .45s ease,backdrop-filter .45s ease}
+  .site-header.is-solid{background:color-mix(in srgb, var(--background) 88%, transparent);border-bottom-color:var(--line);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+  .site-header .wrap{display:flex;height:4rem;align-items:center;justify-content:space-between;padding-inline:var(--pad)}
+  .brand-logo{height:2rem;width:auto}
+  @media (min-width:768px){.brand-logo{height:2.25rem}}
+  .nav{display:none;align-items:center;gap:2rem;font-size:.75rem;font-weight:500;text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}
+  .nav a{transition:color .25s}
+  .nav a:hover{color:var(--foreground)}
+  @media (min-width:768px){.nav{display:flex}}
+  .menu-btn{display:grid;place-items:center;width:2.5rem;height:2.5rem;border:1px solid var(--line);background:transparent;color:var(--foreground);cursor:pointer}
+  @media (min-width:768px){.menu-btn{display:none}}
+  .mobile-menu{display:none;border-bottom:1px solid var(--line);background:var(--background);padding:1rem var(--pad) 1.5rem}
+  .mobile-menu.open{display:block}
+  .mobile-menu a{display:block;padding:.85rem 0;border-bottom:1px solid var(--line);font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.14em;color:var(--muted)}
+  .mobile-menu a:last-child{border-bottom:0}
+
+  /* ---------- Hero ---------- */
+  .hero{position:relative;min-height:92svh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;padding:7rem var(--pad) 3.5rem}
+  @media (min-width:768px){.hero{padding-bottom:4rem}}
+  /* ---------- Hero: camadas de luz ---------- */
+  .hero-layers{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+  .par{position:absolute;inset:0;will-change:transform}
+  .par-slow{transform:translate3d(0,calc(var(--p,0) * 12vh),0)}
+  .par-mid{transform:translate3d(0,calc(var(--p,0) * 7vh),0)}
+  .par-fast{transform:translate3d(0,calc(var(--p,0) * 3vh),0)}
+
+  /* paineis flutuantes (telas de projetos) */
+  .hero-panels{position:absolute;inset:0;pointer-events:none}
+  .panel{position:absolute;will-change:transform;
+    transform:translate3d(calc((var(--mx,50) - 50) * var(--dx,.3) * 1px),calc((var(--my,40) - 40) * var(--dy,.3) * 1px),0);
+    transition:transform .6s cubic-bezier(.22,1,.36,1)}
+  .panel img{display:block;width:100%;height:auto;filter:drop-shadow(0 24px 60px rgba(0,0,0,.55)) drop-shadow(0 0 44px color-mix(in srgb,var(--primary) 16%,transparent))}
+  .panel-1{left:2%;top:15%;width:clamp(170px,21vw,330px);opacity:.9;--dx:.42;--dy:.3}
+  .panel-2{right:3%;top:9%;width:clamp(150px,17vw,270px);opacity:.72;filter:blur(.4px);--dx:-.62;--dy:.42}
+  .panel-3{left:28%;top:1%;width:clamp(105px,12vw,185px);opacity:.5;filter:blur(1.2px);--dx:.24;--dy:.16}
+  .panel-4{right:23%;top:24%;width:clamp(125px,15vw,235px);opacity:.62;filter:blur(.7px);--dx:-.38;--dy:-.26}
+  .panel-1 img{animation:floatA 16s ease-in-out infinite alternate}
+  .panel-2 img{animation:floatB 21s ease-in-out infinite alternate;animation-delay:-4s}
+  .panel-3 img{animation:floatC 27s ease-in-out infinite alternate;animation-delay:-9s}
+  .panel-4 img{animation:floatD 19s ease-in-out infinite alternate;animation-delay:-13s}
+  @keyframes floatA{from{transform:translate3d(0,0,0) rotate(-1.1deg)}to{transform:translate3d(2.5%,-4%,0) rotate(1.5deg)}}
+  @keyframes floatB{from{transform:translate3d(0,0,0) rotate(1.3deg)}to{transform:translate3d(-3%,3.5%,0) rotate(-1.2deg)}}
+  @keyframes floatC{from{transform:translate3d(0,0,0) rotate(-.8deg)}to{transform:translate3d(3.5%,4.5%,0) rotate(1.8deg)}}
+  @keyframes floatD{from{transform:translate3d(0,0,0) rotate(1deg)}to{transform:translate3d(-2%,-3.5%,0) rotate(-1.6deg)}}
+  @media (max-width:900px){.panel-3,.panel-4{display:none}}
+  @media (max-width:640px){.panel-1{opacity:.5}.panel-2{opacity:.4}}
+
+  /* fundo tecnologico do hero */
+  .hero-media{position:absolute;inset:-6%;background-image:url('assets/hero-fundo.jpg');background-size:cover;background-position:center;
+    opacity:.5;mix-blend-mode:screen;filter:saturate(1.05) contrast(1.02);
+    -webkit-mask-image:linear-gradient(to bottom,rgba(0,0,0,.95) 0%,rgba(0,0,0,.6) 42%,rgba(0,0,0,.15) 70%,transparent 88%);
+    mask-image:linear-gradient(to bottom,rgba(0,0,0,.95) 0%,rgba(0,0,0,.6) 42%,rgba(0,0,0,.15) 70%,transparent 88%);
+    animation:heroDrift 46s ease-in-out infinite alternate}
+  @keyframes heroDrift{
+    from{transform:translate3d(0,calc(var(--p,0) * 12vh),0) scale(1.02)}
+    to{transform:translate3d(-1.6%,calc(var(--p,0) * 12vh - 1.2%),0) scale(1.13)}}
+  @media (max-width:640px){.hero-media{opacity:.34}}
+
+  /* brilho superior difuso */
+  .hero-topglow{position:absolute;left:50%;top:-22rem;width:70rem;height:40rem;transform:translateX(-50%);
+    background:radial-gradient(50% 50% at 50% 50%,color-mix(in srgb,var(--primary) 18%,transparent),transparent 70%);
+    filter:blur(40px)}
+
+  /* auroras */
+  .glow{position:absolute;border-radius:50%;filter:blur(70px);will-change:transform}
+  .glow-1{left:-8rem;top:0;width:26rem;height:26rem;
+    background:radial-gradient(circle,color-mix(in srgb,var(--primary) 42%,transparent),transparent 70%);
+    animation:drift1 24s ease-in-out infinite}
+  @media (min-width:768px){.glow-1{left:-6rem;top:-2%;width:40rem;height:40rem}}
+  .glow-2{right:-12%;top:16%;width:20rem;height:20rem;
+    background:radial-gradient(circle,color-mix(in srgb,var(--primary) 26%,transparent),transparent 70%);
+    animation:drift2 31s ease-in-out infinite}
+  @media (min-width:768px){.glow-2{width:34rem;height:34rem}}
+  .glow-3{bottom:-16%;left:30%;width:22rem;height:22rem;
+    background:radial-gradient(circle,color-mix(in srgb,var(--foreground) 16%,transparent),transparent 70%);
+    animation:drift3 38s ease-in-out infinite}
+  @media (min-width:768px){.glow-3{width:32rem;height:32rem}}
+  @keyframes drift1{0%,100%{transform:translate3d(0,0,0) scale(1)}33%{transform:translate3d(4rem,-3rem,0) scale(1.12)}66%{transform:translate3d(-2rem,2rem,0) scale(.94)}}
+  @keyframes drift2{0%,100%{transform:translate3d(0,0,0) scale(1.05)}50%{transform:translate3d(-5rem,4rem,0) scale(.9)}}
+  @keyframes drift3{0%,100%{transform:translate3d(0,0,0) scale(.95)}50%{transform:translate3d(3rem,-3rem,0) scale(1.1)}}
+
+  /* malha */
+  .hero-grid{position:absolute;inset:0;opacity:.5;
+    background-image:repeating-linear-gradient(to right,var(--line) 0 1px,transparent 1px 12.5%),
+                     repeating-linear-gradient(to bottom,var(--line) 0 1px,transparent 1px 25%);
+    mask-image:radial-gradient(120% 90% at 50% 30%,#000 18%,transparent 76%);
+    -webkit-mask-image:radial-gradient(120% 90% at 50% 30%,#000 18%,transparent 76%)}
+  .hero-grid-lit{position:absolute;inset:0;opacity:0;transition:opacity .6s ease;
+    background-image:repeating-linear-gradient(to right,color-mix(in srgb,var(--primary) 60%,transparent) 0 1px,transparent 1px 12.5%),
+                     repeating-linear-gradient(to bottom,color-mix(in srgb,var(--primary) 50%,transparent) 0 1px,transparent 1px 25%);
+    -webkit-mask-image:radial-gradient(24rem 24rem at calc(var(--mx,50) * 1%) calc(var(--my,40) * 1%),#000,transparent 68%);
+    mask-image:radial-gradient(24rem 24rem at calc(var(--mx,50) * 1%) calc(var(--my,40) * 1%),#000,transparent 68%)}
+  .hero.lit .hero-grid-lit{opacity:.55}
+
+  /* luz que segue o cursor */
+  .hero-spot{position:absolute;inset:0;opacity:0;transition:opacity .6s ease;mix-blend-mode:screen;
+    background:radial-gradient(28rem 28rem at calc(var(--mx,50) * 1%) calc(var(--my,40) * 1%),color-mix(in srgb,var(--primary) 16%,transparent),transparent 70%)}
+  .hero.lit .hero-spot{opacity:1}
+
+  /* órbitas */
+  .orbit{position:absolute;border-radius:50%}
+  .orbit-a{right:5%;top:12%;width:15rem;height:15rem;border:1px solid color-mix(in srgb,var(--primary) 28%,transparent);animation:spin 34s linear infinite}
+  .orbit-a::after{content:"";position:absolute;top:-5px;left:50%;width:9px;height:9px;margin-left:-4.5px;border-radius:50%;background:var(--primary);box-shadow:0 0 18px 3px color-mix(in srgb,var(--primary) 60%,transparent)}
+  @media (min-width:768px){.orbit-a{width:27rem;height:27rem}}
+  .orbit-b{right:11%;top:20%;width:11rem;height:11rem;border:1px dashed color-mix(in srgb,var(--foreground) 14%,transparent);animation:spin 52s linear infinite reverse}
+  @media (min-width:768px){.orbit-b{width:19rem;height:19rem}}
+  .orbit-c{right:2%;top:30%;width:22rem;height:22rem;border:1px solid color-mix(in srgb,var(--foreground) 7%,transparent);animation:spin 78s linear infinite}
+  @media (min-width:768px){.orbit-c{width:36rem;height:36rem}}
+  @keyframes spin{to{transform:rotate(360deg)}}
+
+  /* poeira luminosa */
+  .dust{position:absolute;inset:0;overflow:hidden}
+  .dust i{position:absolute;bottom:-2rem;width:3px;height:3px;border-radius:50%;opacity:0;
+    background:color-mix(in srgb,var(--primary) 80%,transparent);animation:rise linear infinite}
+  @keyframes rise{0%{opacity:0;transform:translateY(0) scale(.5)}12%{opacity:.9}70%{opacity:.5}100%{opacity:0;transform:translateY(-70vh) scale(1.1)}}
+
+  .hero-vignette{position:absolute;inset:0;background:radial-gradient(125% 100% at 50% 42%,transparent 38%,color-mix(in srgb,var(--background) 88%,transparent) 100%)}
+  .hero-fade{position:absolute;inset-inline:0;bottom:0;height:11rem;background:linear-gradient(to top,var(--background),transparent)}
+
+  /* conteúdo */
+  .hero .wrap{position:relative;z-index:2;transform:translate3d(0,calc(var(--p,0) * 6vh),0);opacity:calc(1 - var(--p,0) * .9)}
+  h1.hero-title{position:relative;overflow:hidden;margin:0;max-width:22ch;font-size:clamp(2rem,7.4vw,7.2rem);line-height:.88;letter-spacing:-.02em}
+  .line{display:block;overflow:hidden;padding-bottom:.06em;margin-bottom:-.06em}
+  .line > span{display:block;transform:translateY(115%);animation:lineUp 1.15s cubic-bezier(.16,1,.3,1) forwards}
+  .line:nth-child(2) > span{animation-delay:.14s}
+  @keyframes lineUp{to{transform:none}}
+  .text-stroke{color:transparent;-webkit-text-stroke:1.5px var(--foreground)}
+  @media (max-width:520px){.text-stroke{-webkit-text-stroke-width:1px}}
+  .sheen{position:absolute;inset-block:-10%;left:0;width:36%;pointer-events:none;mix-blend-mode:screen;filter:blur(7px);
+    background:linear-gradient(100deg,transparent,color-mix(in srgb,var(--primary) 42%,transparent) 42%,rgba(255,255,255,.42) 50%,color-mix(in srgb,var(--primary) 42%,transparent) 58%,transparent);
+    animation:sheen 6.5s cubic-bezier(.45,0,.25,1) infinite;animation-delay:1.1s}
+  @keyframes sheen{0%{transform:translateX(-140%)}55%,100%{transform:translateX(420%)}}
+  .hero-foot{margin-top:2.5rem;display:flex;flex-direction:column;gap:2rem;border-top:1px solid var(--line);padding-top:1.75rem}
+  @media (min-width:768px){.hero-foot{flex-direction:row;align-items:flex-end;justify-content:space-between}}
+  .hero-foot p{margin:0;max-width:36rem;font-size:1rem;line-height:1.75;color:var(--muted)}
+  @media (min-width:768px){.hero-foot p{font-size:1.125rem}}
+  .scroll-cue{display:inline-flex;align-items:center;gap:.75rem;font-size:.875rem;font-weight:500;transition:color .25s,gap .25s}
+  .scroll-cue:hover{color:var(--primary);gap:1.15rem}
+  .scroll-cue svg{animation:bob 2.4s ease-in-out infinite}
+  @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
+  .hero-in{animation:heroIn .9s cubic-bezier(.16,1,.3,1) both;animation-delay:.42s}
+  @keyframes heroIn{from{opacity:0;transform:translateY(2rem)}to{opacity:1;transform:none}}
+
+  /* ---------- Seções ---------- */
+  section{position:relative}
+  .sec{padding:5rem var(--pad)}
+  @media (min-width:768px){.sec{padding:7rem var(--pad)}}
+  .sec-head h2{margin:0;font-size:2.25rem;line-height:1.05}
+  @media (min-width:768px){.sec-head h2{font-size:3.75rem}}
+  .sec-head p{margin:0;max-width:28rem;font-size:.875rem;line-height:1.65;color:var(--muted)}
+
+  /* ---------- Trabalhos ---------- */
+  .trabalhos-grid{margin-top:3.5rem;display:grid;gap:3.5rem 2rem}
+  @media (min-width:768px){.trabalhos-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  .card{border:1px solid var(--line);background:var(--surface);overflow:hidden}
+  .chrome{display:flex;height:2.5rem;align-items:center;gap:.375rem;border-bottom:1px solid var(--line);padding-inline:1rem}
+  .chrome i{width:.5rem;height:.5rem;border-radius:50%;background:color-mix(in srgb,var(--muted) 40%,transparent)}
+  .chrome i:nth-child(2){background:color-mix(in srgb,var(--muted) 25%,transparent)}
+  .chrome i:nth-child(3){background:color-mix(in srgb,var(--muted) 15%,transparent)}
+  .chrome span{margin-left:.75rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:.625rem;color:var(--muted)}
+  .shot{position:relative;aspect-ratio:16/9;overflow:hidden}
+  .shot img{width:100%;height:100%;object-fit:cover;object-position:center top;transition:transform .7s ease-out}
+  .group:hover .shot img{transform:scale(1.025)}
+  .shot .badge{position:absolute;left:1rem;top:1rem;border:1px solid color-mix(in srgb,var(--primary) 40%,transparent);background:color-mix(in srgb,var(--background) 80%,transparent);backdrop-filter:blur(6px);padding:.25rem .75rem;font-size:.625rem;font-weight:600;text-transform:uppercase;letter-spacing:.14em;color:var(--primary)}
+  .shot .placeholder{display:flex;width:100%;height:100%;align-items:center;justify-content:center;background:linear-gradient(to bottom right,var(--surface),var(--background),var(--surface));font-family:var(--display);font-size:1.5rem;font-weight:600;color:var(--muted)}
+  @media (min-width:768px){.shot .placeholder{font-size:1.875rem}}
+  .card-meta{margin-top:1.25rem;display:flex;align-items:flex-start;justify-content:space-between;gap:1rem}
+  .card-meta .cat{margin:0 0 .5rem;font-size:.625rem;font-weight:600;text-transform:uppercase;letter-spacing:.16em;color:var(--primary)}
+  .card-meta h3{margin:0;font-size:1.25rem}
+  @media (min-width:768px){.card-meta h3{font-size:1.5rem}}
+  .arrow-up{flex:none;margin-top:.25rem;transition:transform .3s,color .3s;color:var(--muted)}
+  .group:hover .arrow-up{transform:translate(4px,-4px);color:var(--primary)}
+
+  /* ---------- Por que um site ---------- */
+  .conv-sec{background:var(--surface);border-top:1px solid var(--line)}
+  .conv-head h2{margin:0;font-size:2.25rem;line-height:1.05}
+  @media (min-width:768px){.conv-head h2{font-size:3.5rem}}
+  .conv-lead{margin:1.75rem 0 0;max-width:42rem;font-size:1.0625rem;line-height:1.8;color:var(--muted)}
+  .dor-grid{margin-top:3.5rem;display:grid;gap:1.75rem}
+  @media (min-width:640px){.dor-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:2.25rem 3rem}}
+  .dor{border-top:1px solid var(--line);padding-top:1.25rem}
+  .dor span{display:block;margin-bottom:.75rem;font-family:var(--display);font-size:.8125rem;font-weight:600;letter-spacing:.08em;color:var(--primary)}
+  .dor h3{margin:0 0 .625rem;font-family:var(--display);font-weight:600;font-size:1.1875rem;line-height:1.3}
+  .dor p{margin:0;font-size:.9375rem;line-height:1.7;color:var(--muted)}
+  .conv-close{margin:3.5rem 0 0;max-width:40rem;border-left:2px solid var(--primary);padding-left:1.25rem;font-family:var(--display);font-weight:600;font-size:1.25rem;line-height:1.45}
+  @media (min-width:768px){.conv-close{font-size:1.625rem}}
+
+  /* argumentos da secao Google */
+  .g-lead{margin-top:4rem;padding-top:2.25rem;border-top:1px solid color-mix(in srgb,var(--primary-foreground) 25%,transparent);max-width:50rem;display:grid;gap:1.25rem}
+  .g-lead h3{margin:0;font-family:var(--display);font-weight:600;font-size:1.375rem;line-height:1.3}
+  @media (min-width:768px){.g-lead h3{font-size:1.625rem}}
+  .g-lead p{font-size:1.0625rem;line-height:1.85;opacity:.85}
+  .g-args{margin-top:4rem;display:grid;gap:2rem}
+  @media (min-width:640px){.g-args{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  @media (min-width:1024px){.g-args{grid-template-columns:repeat(4,minmax(0,1fr));gap:2.5rem}}
+  .g-arg{border-top:1px solid color-mix(in srgb,var(--primary-foreground) 30%,transparent);padding-top:1.25rem}
+  .g-arg span{display:block;margin-bottom:.75rem;font-family:var(--display);font-size:.8125rem;font-weight:600;letter-spacing:.08em}
+  .g-arg h3{margin:0 0 .625rem;font-family:var(--display);font-weight:600;font-size:1.125rem;line-height:1.3}
+  .g-arg p{margin:0;font-size:.9375rem;line-height:1.7}
+  .g-fecho{margin:5rem 0 0;max-width:46rem;font-family:var(--display);font-weight:600;font-size:1.25rem;line-height:1.45}
+  @media (min-width:768px){.g-fecho{margin-top:7rem;font-size:1.75rem}}
+
+  /* ---------- CTA discreto (link com seta) ---------- */
+  .cta-inline{margin-top:2.5rem}
+  .link-inline{display:inline-flex;align-items:center;gap:.5rem;font-size:.9375rem;font-weight:600;color:var(--primary)}
+  .link-inline svg{transition:transform .3s}
+  .link-inline:hover svg{transform:translate(3px,-3px)}
+  .link-inline-dark{color:var(--primary-foreground);text-decoration:underline;text-underline-offset:4px;display:inline-flex;align-items:center;gap:.5rem;font-size:.9375rem;font-weight:600}
+  .link-inline-dark svg{transition:transform .3s}
+  .link-inline-dark:hover svg{transform:translate(3px,-3px)}
+
+  /* ---------- Botao flutuante de WhatsApp ---------- */
+  .wa-float{position:fixed;right:1.25rem;bottom:1.25rem;z-index:60;display:inline-flex;align-items:center;gap:.5rem;
+    background:var(--primary);color:var(--primary-foreground);border-radius:999px;padding:.9375rem;
+    box-shadow:0 14px 34px rgba(0,0,0,.5);opacity:0;transform:translateY(1.5rem) scale(.9);pointer-events:none;
+    transition:opacity .35s ease,transform .35s cubic-bezier(.16,1,.3,1)}
+  .wa-float span{display:none;font-weight:600;font-size:.9375rem;white-space:nowrap}
+  @media (min-width:768px){.wa-float{right:2rem;bottom:2rem;padding:1rem 1.375rem;gap:.625rem}.wa-float span{display:inline}}
+  .wa-float.is-on{opacity:1;transform:none;pointer-events:auto}
+  .wa-float:hover{transform:translateY(-3px)}
+
+  /* ---------- Case ilustrativo ---------- */
+  .case-sec{background:var(--surface);border-top:1px solid var(--line)}
+  .case-grid{display:grid;gap:2.5rem}
+  @media (min-width:1024px){.case-grid{grid-template-columns:1fr 1.1fr;gap:4rem;align-items:start}}
+  .case-quote{margin:0;font-family:var(--display);font-weight:500;font-size:1.25rem;line-height:1.55}
+  @media (min-width:768px){.case-quote{font-size:1.625rem;line-height:1.5}}
+  .case-quote p{margin:0 0 1.25rem}
+  .case-quote p:last-child{margin-bottom:0}
+  .case-tag{display:inline-block;border:1px solid var(--line);padding:.5rem .875rem;font-size:.6875rem;font-weight:600;
+    text-transform:uppercase;letter-spacing:.14em;color:var(--muted)}
+  .case-steps{margin-top:2.5rem;display:grid;gap:1.75rem}
+  @media (min-width:640px){.case-steps{grid-template-columns:repeat(3,minmax(0,1fr));gap:2rem}}
+  .case-step{border-top:1px solid var(--line);padding-top:1.125rem}
+  .case-step h3{margin:0 0 .625rem;font-family:var(--display);font-size:.8125rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--primary)}
+  .case-step p{margin:0;font-size:.9375rem;line-height:1.7;color:var(--muted)}
+  .case-note{margin:2.5rem 0 0;max-width:40rem;font-size:.8125rem;line-height:1.65;color:var(--muted)}
+
+  /* ---------- Sobre mim ---------- */
+  .sobre-grid{display:grid;gap:2.5rem}
+  @media (min-width:1024px){.sobre-grid{grid-template-columns:.85fr 1.15fr;gap:4rem;align-items:start}}
+  .selo{width:3.5rem;height:3.5rem;margin-bottom:1.5rem;border:1px solid var(--line);background:var(--card)}
+  .sobre-texto p{margin:0 0 1.25rem;font-size:1.0625rem;line-height:1.8;color:var(--muted)}
+  .sobre-texto p:last-child{margin-bottom:0}
+  .assinatura{margin-top:2rem;display:flex;align-items:baseline;gap:.75rem;font-family:var(--display);font-weight:600;font-size:1.125rem;color:var(--foreground)}
+  .assinatura small{font-family:var(--sans);font-weight:400;font-size:.8125rem;letter-spacing:.1em;text-transform:uppercase;color:var(--primary)}
+
+  /* ---------- Serviços ---------- */
+  .servicos-grid{display:grid;gap:3.5rem}
+  @media (min-width:1024px){.servicos-grid{grid-template-columns:.85fr 1.15fr;gap:3.5rem}}
+  .service-list{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .service{display:grid;gap:1rem;padding-block:1.75rem;border-bottom:1px solid var(--line)}
+  .service:last-child{border-bottom:0}
+  @media (min-width:640px){.service{grid-template-columns:52px 1fr 1.3fr;align-items:start;gap:1rem}}
+  .service span{font-size:.75rem;color:var(--primary)}
+  .service h3{margin:0;font-family:var(--display);font-weight:600;font-size:1.25rem}
+  .service p{margin:0;font-size:.875rem;line-height:1.65;color:var(--muted)}
+
+  /* ---------- Social ---------- */
+  .chips{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.5rem}
+  .chip{border:1px solid var(--line);padding:.75rem 1rem;font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
+  .social-grid{margin-top:3.5rem;display:grid;gap:1.5rem;align-items:start}
+  @media (min-width:640px){.social-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  @media (min-width:1280px){.social-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+  .social-card{display:block;overflow:hidden;border:1px solid var(--line);background:color-mix(in srgb,var(--card) 40%,transparent);transition:border-color .3s}
+  .social-card:hover{border-color:color-mix(in srgb,var(--primary) 50%,transparent)}
+  .social-top{display:flex;align-items:center;gap:1rem;border-bottom:1px solid var(--line);padding:1.25rem}
+  .avatar{display:grid;place-items:center;width:3rem;height:3rem;flex:none;border-radius:50%;font-family:var(--display);font-size:1rem;font-weight:600;color:var(--background)}
+  .avatar-img{width:3rem;height:3rem;flex:none;border-radius:50%;object-fit:cover;box-shadow:0 0 0 1px var(--line)}
+  .social-top .who{min-width:0;flex:1}
+  .social-top .who p{margin:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:.875rem;font-weight:600}
+  .social-top .who span{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:.75rem;color:var(--muted)}
+  .ig-icon{flex:none;color:var(--muted);transition:color .3s}
+  .social-card:hover .ig-icon{color:var(--primary)}
+  .tiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line);overflow:hidden}
+  .tile{display:grid;place-items:center;min-width:0;aspect-ratio:var(--ar,4/5);overflow:hidden;background:var(--surface)}
+    .tile span{font-family:var(--display);font-size:1.5rem;font-weight:600;color:color-mix(in srgb,var(--foreground) 70%,transparent)}
+  .tile img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .6s ease}
+  .social-card:hover .tile img{transform:scale(1.05)}
+  .social-foot{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.25rem}
+  .social-foot p{margin:0;font-size:.75rem;text-transform:uppercase;letter-spacing:.14em;color:var(--muted)}
+  .social-foot span{display:inline-flex;align-items:center;gap:.25rem;font-size:.75rem;font-weight:600;color:var(--primary)}
+
+  /* ---------- Google ---------- */
+  .google-sec{background:var(--primary);color:var(--primary-foreground);padding:5rem var(--pad)}
+  @media (min-width:768px){.google-sec{padding:7rem var(--pad)}}
+  .google-grid{display:grid;gap:3rem}
+  @media (min-width:1024px){.google-grid{grid-template-columns:1.2fr .8fr;align-items:end;gap:3rem}}
+  .g-box{display:grid;place-items:center;width:3.5rem;height:3.5rem;margin-bottom:2rem;border:1px solid color-mix(in srgb,var(--primary-foreground) 30%,transparent);font-family:var(--display);font-size:1.5rem;font-weight:600}
+  .google-sec .eyebrow{color:var(--primary-foreground)}
+  .google-sec h2{margin:0;max-width:56rem;font-size:2.25rem;line-height:1.05}
+  @media (min-width:768px){.google-sec h2{font-size:4.5rem}}
+  .google-sec p{margin:0;font-size:1rem;line-height:1.75;opacity:.8}
+  .google-sec .chip{border-color:color-mix(in srgb,var(--primary-foreground) 30%,transparent);color:var(--primary-foreground)}
+
+  /* ---------- Contato ---------- */
+  .contato-sec{padding:5rem var(--pad)}
+  @media (min-width:768px){.contato-sec{padding:8rem var(--pad)}}
+  /* mesmo tamanho do título da seção Google (text-4xl / md:text-7xl) */
+  .contato-sec h2{margin:0;max-width:56rem;font-family:var(--display);font-weight:600;font-size:2.25rem;line-height:1.05;letter-spacing:-.02em}
+  @media (min-width:768px){.contato-sec h2{font-size:4.5rem}}
+  .cta-row{margin-top:3rem;display:flex;flex-direction:column;gap:1rem}
+  @media (min-width:640px){.cta-row{flex-direction:row}}
+  .btn{display:inline-flex;min-height:3.5rem;align-items:center;justify-content:center;gap:.75rem;padding-inline:1.75rem;font-weight:600;transition:transform .3s cubic-bezier(.16,1,.3,1),background-color .3s,color .3s}
+  .btn-solid{background:var(--primary);color:var(--primary-foreground)}
+  .btn-solid:hover{transform:translateY(-4px)}
+  .btn-outline{border:1px solid var(--line)}
+  .btn-outline:hover{background:var(--foreground);color:var(--background)}
+
+  /* ---------- Footer ---------- */
+  .site-footer{border-top:1px solid var(--line);padding:2rem var(--pad)}
+  .site-footer .wrap{display:flex;flex-direction:column;gap:1.25rem;font-size:.75rem;color:var(--muted)}
+  @media (min-width:640px){.site-footer .wrap{flex-direction:row;align-items:center;justify-content:space-between}}
+  .site-footer img{height:2rem;width:auto;opacity:.8}
+  .site-footer p{margin:0;display:flex;align-items:center;gap:.5rem}
+
+  /* ---------- Reveal ---------- */
+  .reveal{opacity:0;transform:translateY(2rem);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+  .reveal.is-in{opacity:1;transform:none}
+
+
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .glow,.sheen,.orbit,.orbit-a,.orbit-b,.orbit-c,.hero-in,.scroll-cue svg,.dust i,.hero-media,.panel img{animation:none}
+    .panel{transform:none;transition:none}
+    .line > span{transform:none;animation:none}
+    .hero .wrap,.par{transform:none;opacity:1}
+    .reveal{opacity:1;transform:none;transition:none}
+    .btn-solid:hover{transform:none}
+    .wa-float{transition:none}
+    .shot img{transition:none}
+  }
+</style>
+
+<!-- ===== DADOS ESTRUTURADOS (Google) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Daniel Soberanis",
+  "description": "Criação de sites profissionais, gestão de redes sociais e especialista em Google Meu Negócio.",
+  "url": "__SITE_URL__/",
+  "logo": "__SITE_URL__/assets/og-image.jpg",
+  "image": "__SITE_URL__/assets/og-image.jpg",
+  "areaServed": [{"@type": "City", "name": "Curitiba"}, {"@type": "State", "name": "Paraná"}],
+  "address": {"@type": "PostalAddress", "addressLocality": "Curitiba", "addressRegion": "PR", "addressCountry": "BR"},
+  "priceRange": "$$",
+  "knowsAbout": ["Criação de sites", "Web design", "Google Meu Negócio", "SEO local", "Gestão de redes sociais", "Design gráfico"],
+  "makesOffer": [
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Sites institucionais"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Lojas e plataformas"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "SEO e performance"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Google Meu Negócio"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Gestão de redes sociais"}}
+  ]
+}
+</script>
+
+<!-- ===== ANALYTICS (opcional) =====
+     Descomente e troque G-XXXXXXXXXXXX pelo ID da sua propriedade no GA4. -->
+<!--
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){{dataLayer.push(arguments);}}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXXXX');
+</script>
+-->
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="#inicio" aria-label="Daniel Soberanis, ir ao início">
+      <img src="assets/logo-ds-light.png" alt="Daniel Soberanis Web Design" class="brand-logo" width="680" height="241" />
+    </a>
+    <nav class="nav" aria-label="Navegação principal">
+      <a href="#trabalhos">Trabalhos</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#social">Social</a>
+      <a href="#google">Google</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg>
+    </button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu" style="position:fixed;top:4rem;left:0;right:0;z-index:49">
+  <a href="#trabalhos">Trabalhos</a>
+  <a href="#servicos">Serviços</a>
+  <a href="#social">Social</a>
+  <a href="#google">Google</a>
+  <a href="#sobre">Sobre</a>
+  <a href="#contato">Contato</a>
+</div>
+
+<a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+<main id="conteudo" class="grain">
+
+  <!-- ============ HERO ============ -->
+  <section id="inicio" class="hero">
+    <div class="hero-layers" aria-hidden="true">
+      <div class="hero-media" aria-hidden="true"></div>
+      <div class="hero-panels" aria-hidden="true">
+        <div class="panel panel-1"><img src="assets/hero-panel-1.webp" alt="" width="760" height="613" /></div>
+        <div class="panel panel-2"><img src="assets/hero-panel-2.webp" alt="" width="760" height="486" /></div>
+        <div class="panel panel-3"><img data-src="assets/hero-panel-3.webp" alt="" width="594" height="649" /></div>
+        <div class="panel panel-4"><img data-src="assets/hero-panel-4.webp" alt="" width="760" height="543" /></div>
+      </div>
+      <div class="par par-slow">
+        <div class="hero-topglow"></div>
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+        <div class="glow glow-3"></div>
+        <div class="hero-grid"></div>
+        <div class="hero-grid-lit"></div>
+        <div class="hero-spot"></div>
+      </div>
+      <div class="par par-mid">
+        <div class="orbit orbit-c"></div>
+        <div class="orbit orbit-a"></div>
+        <div class="orbit orbit-b"></div>
+      </div>
+      <div class="par par-fast">
+        <div class="dust">
+            <i style="left:7%;width:4px;height:4px;animation-duration:21s;animation-delay:-0s"></i>
+            <i style="left:14%;width:3px;height:3px;animation-duration:27s;animation-delay:-4s"></i>
+            <i style="left:22%;width:5px;height:5px;animation-duration:18s;animation-delay:-9s"></i>
+            <i style="left:29%;width:4px;height:4px;animation-duration:31s;animation-delay:-2s"></i>
+            <i style="left:36%;width:4px;height:4px;animation-duration:24s;animation-delay:-13s"></i>
+            <i style="left:44%;width:3px;height:3px;animation-duration:29s;animation-delay:-6s"></i>
+            <i style="left:52%;width:5px;height:5px;animation-duration:20s;animation-delay:-1s"></i>
+            <i style="left:59%;width:4px;height:4px;animation-duration:26s;animation-delay:-11s"></i>
+            <i style="left:66%;width:4px;height:4px;animation-duration:23s;animation-delay:-5s"></i>
+            <i style="left:73%;width:3px;height:3px;animation-duration:30s;animation-delay:-15s"></i>
+            <i style="left:81%;width:4px;height:4px;animation-duration:19s;animation-delay:-8s"></i>
+            <i style="left:88%;width:5px;height:5px;animation-duration:28s;animation-delay:-3s"></i>
+            <i style="left:94%;width:4px;height:4px;animation-duration:25s;animation-delay:-12s"></i>
+            <i style="left:48%;width:3px;height:3px;animation-duration:33s;animation-delay:-17s"></i>
+        </div>
+      </div>
+      <div class="hero-vignette"></div>
+      <div class="hero-fade"></div>
+    </div>
+    <div class="wrap">
+      <p class="eyebrow hero-in">Daniel Soberanis · Webdesigner e presença digital</p>
+      <h1 class="hero-title display-type"><span class="line"><span>Presença digital</span></span><span class="line"><span class="text-stroke">que converte.</span></span><span class="sheen"></span></h1>
+      <div class="hero-foot hero-in" style="animation-delay:.62s">
+        <p>Sites que posicionam marcas, despertam interesse e conduzem pessoas até a decisão.</p>
+        <a href="#trabalhos" class="scroll-cue">
+          Explorar projetos
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TRABALHOS ============ -->
+  <section id="trabalhos" class="sec" style="border-top:1px solid var(--line)">
+    <div class="wrap">
+      <div class="sec-head reveal" style="display:flex;flex-direction:column;gap:1.25rem">
+        <div style="flex:1">
+          <p class="eyebrow">Projetos desenvolvidos</p>
+          <h2 class="display-type" style="max-width:48rem">Estratégia visível em cada tela.</h2>
+        </div>
+        <p style="max-width:28rem">Uma seleção de experiências digitais criadas para negócios, serviços e plataformas com objetivos distintos.</p>
+      </div>
+
+      <div class="trabalhos-grid">
+        <article class="group reveal">
+          <a href="https://www.jabseventos.com.br" target="_blank" rel="noreferrer" aria-label="Visitar Jab’s Eventos">
+            <div class="card">
+              <div class="chrome"><i></i><i></i><i></i><span>www.jabseventos.com.br</span></div>
+              <div class="shot"><img src="assets/projetos/jabs-wide.jpg" alt="Página inicial do projeto Jab’s Eventos" width="1200" height="675" loading="eager" decoding="async" /></div>
+            </div>
+            <div class="card-meta">
+              <div><p class="cat">01 · Eventos e audiovisual</p><h3 class="display-type">Jab’s Eventos</h3></div>
+              <svg class="arrow-up" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+            </div>
+          </a>
+        </article>
+
+        <article class="group reveal" style="transition-delay:60ms">
+          <a href="https://www.dgeventoscorporativos.com.br" target="_blank" rel="noreferrer" aria-label="Visitar DG Eventos Corporativos">
+            <div class="card">
+              <div class="chrome"><i></i><i></i><i></i><span>www.dgeventoscorporativos.com.br</span></div>
+              <div class="shot"><img src="assets/projetos/dg-wide.jpg" alt="Página inicial do projeto DG Eventos Corporativos" width="1200" height="675" loading="eager" decoding="async" /></div>
+            </div>
+            <div class="card-meta">
+              <div><p class="cat">02 · Eventos corporativos</p><h3 class="display-type">DG Eventos Corporativos</h3></div>
+              <svg class="arrow-up" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+            </div>
+          </a>
+        </article>
+
+        <article class="group reveal">
+          <a href="https://www.fernandeseventos.com.br" target="_blank" rel="noreferrer" aria-label="Visitar Fernandes Eventos">
+            <div class="card">
+              <div class="chrome"><i></i><i></i><i></i><span>www.fernandeseventos.com.br</span></div>
+              <div class="shot"><img src="assets/projetos/fernandes-wide.jpg" alt="Página inicial do projeto Fernandes Eventos" width="1200" height="675" loading="lazy" decoding="async" /></div>
+            </div>
+            <div class="card-meta">
+              <div><p class="cat">03 · Produção de eventos</p><h3 class="display-type">Fernandes Eventos</h3></div>
+              <svg class="arrow-up" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+            </div>
+          </a>
+        </article>
+
+        <article class="group reveal" style="transition-delay:60ms">
+          <a href="https://www.revistacasanova.com.br" target="_blank" rel="noreferrer" aria-label="Visitar Revista Casa Nova">
+            <div class="card">
+              <div class="chrome"><i></i><i></i><i></i><span>www.revistacasanova.com.br</span></div>
+              <div class="shot"><img src="assets/projetos/casa-nova-wide.jpg" alt="Página inicial do projeto Revista Casa Nova" width="1200" height="675" loading="lazy" decoding="async" /></div>
+            </div>
+            <div class="card-meta">
+              <div><p class="cat">04 · Portal editorial</p><h3 class="display-type">Revista Casa Nova</h3></div>
+              <svg class="arrow-up" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+            </div>
+          </a>
+        </article>
+
+        <article class="group reveal">
+          <a href="https://daniellebocchi-wine.vercel.app/" target="_blank" rel="noreferrer" aria-label="Visitar Danielle Bocchi">
+            <div class="card">
+              <div class="chrome"><i></i><i></i><i></i><span>daniellebocchi-wine.vercel.app</span></div>
+              <div class="shot"><img src="assets/projetos/danielle-wide.jpg" alt="Página inicial do projeto Danielle Bocchi" width="1200" height="675" loading="lazy" decoding="async" /></div>
+            </div>
+            <div class="card-meta">
+              <div><p class="cat">05 · Estética e saúde</p><h3 class="display-type">Danielle Bocchi</h3></div>
+              <svg class="arrow-up" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+            </div>
+          </a>
+        </article>
+
+        <article class="group reveal" style="transition-delay:60ms">
+          <a href="https://www.multitoolbox.online" target="_blank" rel="noreferrer" aria-label="Visitar MultiToolbox">
+            <div class="card">
+              <div class="chrome"><i></i><i></i><i></i><span>www.multitoolbox.online</span></div>
+              <div class="shot"><img src="assets/projetos/multitoolbox-wide.jpg" alt="Página inicial do projeto MultiToolbox" width="1200" height="675" loading="lazy" decoding="async" /></div>
+            </div>
+            <div class="card-meta">
+              <div><p class="cat">06 · Plataforma de utilidades</p><h3 class="display-type">MultiToolbox</h3></div>
+              <svg class="arrow-up" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+            </div>
+          </a>
+        </article>
+
+        <article class="group reveal">
+          <a href="https://www.vdemetrio.com.br" target="_blank" rel="noreferrer" aria-label="Visitar VDemetrio">
+            <div class="card">
+              <div class="chrome"><i></i><i></i><i></i><span>www.vdemetrio.com.br</span></div>
+              <div class="shot"><img src="assets/projetos/vdemetrio-wide.jpg" alt="Página inicial do projeto VDemetrio" width="1200" height="675" loading="lazy" decoding="async" /></div>
+            </div>
+            <div class="card-meta">
+              <div><p class="cat">07 · Locação audiovisual</p><h3 class="display-type">VDemetrio</h3></div>
+              <svg class="arrow-up" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+            </div>
+          </a>
+        </article>
+
+        <article class="group reveal" style="transition-delay:60ms">
+          <a href="https://www.clickaudiovisual.com.br" target="_blank" rel="noreferrer" aria-label="Visitar Click Audiovisual">
+            <div class="card">
+              <div class="chrome"><i></i><i></i><i></i><span>www.clickaudiovisual.com.br</span></div>
+              <div class="shot">
+                <div class="placeholder">Click Audiovisual</div>
+                <span class="badge">Em desenvolvimento</span>
+              </div>
+            </div>
+            <div class="card-meta">
+              <div><p class="cat">08 · Locação de equipamentos</p><h3 class="display-type">Click Audiovisual</h3></div>
+              <svg class="arrow-up" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+            </div>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CASE (dor -> solucao -> resultado) ============ -->
+  <section id="case" class="sec case-sec">
+    <div class="wrap">
+      <div class="case-grid">
+        <div class="reveal">
+          <span class="case-tag">Caso ilustrativo</span>
+          <h2 class="display-type" style="margin:1.5rem 0 0;font-size:2.25rem;line-height:1.05">A dor que um site resolve.</h2>
+          <p style="margin:1.5rem 0 0;max-width:26rem;font-size:.9375rem;line-height:1.75;color:var(--muted)">Um retrato do cliente que chega até mim: negócio bom, trabalho bem feito, e mesmo assim invisível para quem não o conhece. É o relato dele, do jeito que ele contaria.</p>
+        </div>
+
+        <div class="reveal" style="transition-delay:80ms">
+          <blockquote class="case-quote">
+            <p>“Eu postava todo dia, respondia todo mundo e cuidava do visual do perfil como se fosse a minha vitrine. E mesmo assim eu vivia explicando o que eu fazia — sempre para quem já me seguia. Quem não me seguia, não me achava.”</p>
+            <p>“Demorei para entender que eu não estava sem cliente. Eu estava sem ser encontrado.”</p>
+            <p>“O Daniel não chegou me vendendo um site bonito. Ele me fez três perguntas sobre o meu negócio e devolveu uma página em que o cliente entende o que eu faço em dez segundos, vê o trabalho e já me chama sabendo o que quer.”</p>
+            <p>“Hoje a conversa é outra. Quem me procura já me viu no Google, já olhou o site e chega decidido. Eu troquei a correria de explicar pela tranquilidade de atender.”</p>
+          </blockquote>
+
+          <div class="case-steps">
+            <div class="case-step"><h3>A dor</h3><p>Dependia do algoritmo para ser visto, só alcançava quem já seguia, e cada indicação começava do zero — com uma explicação longa e um portfólio espalhado em prints.</p></div>
+            <div class="case-step"><h3>O que foi feito</h3><p>Uma página só, com a mensagem na ordem certa: o que é, para quem é, prova do trabalho e contato em um toque. Ficha do Google Meu Negócio criada e tudo preparado para aparecer na busca local.</p></div>
+            <div class="case-step"><h3>O que muda</h3><p>O cliente passa a chegar informado. Menos tempo explicando, mais tempo fechando — e uma presença que não desaparece na próxima vez que o algoritmo mudar de ideia.</p></div>
+          </div>
+
+          <p class="case-note">Relato ilustrativo, escrito a partir de situações reais de quem atende bem e mesmo assim não é encontrado. Assim que eu tiver depoimentos publicados, eles entram aqui no lugar deste texto.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ POR QUE UM SITE ============ -->
+  <section id="por-que-site" class="sec conv-sec">
+    <div class="wrap">
+      <div class="conv-head reveal">
+        <p class="eyebrow">O custo de não ter um site</p>
+        <h2 class="display-type">Instagram é vitrine alugada. <span class="text-stroke">Site é terreno próprio.</span></h2>
+        <p class="conv-lead">Você posta, cuida do visual e responde todo mundo — e ainda assim depende de um algoritmo que muda a regra sem avisar. Enquanto isso, tem gente no Google agora mesmo digitando exatamente o serviço que você entrega. O site é onde essa pessoa te encontra, te avalia e decide te chamar. Sem ele, ela liga para o concorrente que apareceu no seu lugar.</p>
+      </div>
+
+      <div class="dor-grid">
+        <div class="dor reveal">
+          <span>01</span>
+          <h3>Você só aparece para quem já te segue</h3>
+          <p>O feed conversa com quem já conhece a sua marca. O site conversa com quem ainda não sabe que você existe — e é justamente aí que mora o cliente novo.</p>
+        </div>
+        <div class="dor reveal" style="transition-delay:80ms">
+          <span>02</span>
+          <h3>A escolha acontece antes do contato</h3>
+          <p>Hoje ninguém liga para pedir informação básica: a pessoa pesquisa, compara e forma opinião sozinha. Se nessa hora o seu negócio não tem onde ser avaliado, ele sai da lista sem você saber.</p>
+        </div>
+        <div class="dor reveal" style="transition-delay:160ms">
+          <span>03</span>
+          <h3>Algoritmo muda. Site não.</h3>
+          <p>Uma semana o post alcança, na outra o alcance cai e o movimento cai junto. O site é o único ponto de presença que é seu por inteiro: ninguém limita quem te vê, e nada desaparece quando a plataforma muda de ideia.</p>
+        </div>
+        <div class="dor reveal" style="transition-delay:240ms">
+          <span>04</span>
+          <h3>Não é gasto: é investimento</h3>
+          <p>Um site apresenta, tira dúvidas, mostra portfólio e traz contato de madrugada, no domingo, no feriado. Você investe uma vez e ele continua vendendo todos os dias. Anúncio não é investimento: para de funcionar no dia em que você para de pagar.</p>
+        </div>
+      </div>
+
+      <p class="conv-close reveal">Cada mês sem site é um mês de clientes que escolheram outra pessoa — não porque ela faz melhor, mas porque foi encontrada primeiro.</p>
+
+      <div class="cta-row reveal">
+        <a class="btn btn-solid" href="https://wa.me/5541984542307?text=Ol%C3%A1%20Daniel%2C%20vi%20seu%20portf%C3%B3lio%20e%20percebi%20que%20estou%20perdendo%20clientes%20por%20n%C3%A3o%20ter%20um%20site.%20Podemos%20conversar%3F" target="_blank" rel="noopener noreferrer nofollow" aria-label="Conversar no WhatsApp sobre ter um site">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/></svg>
+          Quero parar de perder cliente
+        </a>
+        <a class="btn btn-outline" href="#servicos" aria-label="Ver os serviços">Ver os serviços</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVIÇOS ============ -->
+  <section id="servicos" class="sec" style="border-top:1px solid var(--line)">
+    <div class="wrap servicos-grid">
+      <div class="reveal">
+        <p class="eyebrow">Como posso ajudar</p>
+        <h2 class="display-type">Do conceito à presença online.</h2>
+      </div>
+      <div class="service-list reveal" style="transition-delay:80ms">
+        <div class="service"><span>01</span><h3>Sites institucionais</h3><p>Projetos completos para apresentar sua empresa com clareza, personalidade e credibilidade.</p></div>
+        <div class="service"><span>02</span><h3>Lojas e plataformas</h3><p>Experiências digitais organizadas para facilitar a navegação, a descoberta e a conversão.</p></div>
+        <div class="service"><span>03</span><h3>SEO e performance</h3><p>Estrutura preparada para buscadores, carregamento rápido e boa experiência em qualquer tela.</p></div>
+        <div class="service"><span>04</span><h3>Manutenção e evolução</h3><p>Acompanhamento para manter conteúdo, tecnologia e presença digital sempre atualizados.</p></div>
+      </div>
+        <div class="cta-inline"><a class="link-inline" href="https://wa.me/5541984542307?text=Ol%C3%A1%20Daniel%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener noreferrer nofollow">Não sabe por onde começar? Falar com o Daniel <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a></div>
+    </div>
+  </section>
+
+  <!-- ============ SOCIAL ============ -->
+  <section id="social" class="sec" style="border-top:1px solid var(--line)">
+    <div class="wrap">
+      <div class="reveal" style="display:grid;gap:2.5rem;margin-bottom:3.5rem">
+        <div>
+          <p class="eyebrow">Social media</p>
+          <h2 class="display-type" style="max-width:48rem">Conteúdo que mantém marcas em movimento.</h2>
+        </div>
+        <div>
+          <p style="margin:0;max-width:36rem;font-size:1rem;line-height:1.75;color:var(--muted)">Gestão criativa de perfis no Instagram: desenvolvimento de artes e criativos exclusivos, planejamento de conteúdo e publicações conduzidas de acordo com o calendário editorial de cada cliente.</p>
+          <div class="chips"><span class="chip">Criativos e artes</span><span class="chip">Calendário editorial</span><span class="chip">Postagens programadas</span></div>
+        </div>
+      </div>
+
+      <div class="social-grid">
+        <a class="social-card group reveal" href="https://www.instagram.com/ufrogbrasil/" target="_blank" rel="noreferrer" style="--h:150;--s:70%;--l:45%">
+          <div class="social-top">
+            <img class="avatar-img" src="assets/social/ufrog-avatar.png" alt="Foto de perfil de UFrog Brasil no Instagram" width="256" height="256" loading="lazy" decoding="async" />
+            <span class="who"><p>UFrog Brasil</p><span>@ufrogbrasil</span></span>
+            <svg class="ig-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          </div>
+          <div class="tiles" style="--ar:0.799">
+            <div class="tile"><img src="assets/social/ufrog-post-1.webp" alt="Arte criada para a UFrog Brasil" width="477" height="595" loading="lazy" decoding="async" /></div>
+            <div class="tile"><img src="assets/social/ufrog-post-2.webp" alt="Arte criada para a UFrog Brasil" width="473" height="594" loading="lazy" decoding="async" /></div>
+          </div>
+          <div class="social-foot"><p>Moda e lifestyle infantil</p><span>Ver perfil <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></span></div>
+        </a>
+
+        <a class="social-card group reveal" href="https://www.instagram.com/wiggyoficial/" target="_blank" rel="noreferrer" style="transition-delay:90ms">
+          <div class="social-top">
+            <img class="avatar-img" src="assets/social/wiggy-avatar.png" alt="Foto de perfil de Wiggy no Instagram" width="256" height="256" loading="lazy" decoding="async" />
+            <span class="who"><p>Wiggy</p><span>@wiggyoficial</span></span>
+            <svg class="ig-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          </div>
+          <div class="tiles" style="--ar:0.806">
+            <div class="tile"><img src="assets/social/wiggy-post-1.webp" alt="Arte criada para a Wiggy" width="484" height="594" loading="lazy" decoding="async" /></div>
+            <div class="tile"><img src="assets/social/wiggy-post-2.webp" alt="Arte criada para a Wiggy" width="474" height="594" loading="lazy" decoding="async" /></div>
+          </div>
+          <div class="social-foot"><p>Moda e lifestyle</p><span>Ver perfil <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></span></div>
+        </a>
+
+        <a class="social-card group reveal" href="https://www.instagram.com/jabseventos/" target="_blank" rel="noreferrer" style="transition-delay:180ms">
+          <div class="social-top">
+            <img class="avatar-img" src="assets/social/jabs-avatar.png" alt="Foto de perfil de Jab's Eventos no Instagram" width="256" height="256" loading="lazy" decoding="async" />
+            <span class="who"><p>Jab’s Eventos</p><span>@jabseventos</span></span>
+            <svg class="ig-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          </div>
+          <div class="tiles" style="--ar:0.984">
+            <div class="tile"><img src="assets/social/jabs-post-1.webp" alt="Arte criada para a Jab's Eventos" width="585" height="599" loading="lazy" decoding="async" /></div>
+            <div class="tile"><img src="assets/social/jabs-post-2.webp" alt="Arte criada para a Jab's Eventos" width="591" height="596" loading="lazy" decoding="async" /></div>
+          </div>
+          <div class="social-foot"><p>Audiovisual para eventos</p><span>Ver perfil <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></span></div>
+        </a>
+
+        <a class="social-card group reveal" href="https://www.instagram.com/passeiodelanchanoguaruja/" target="_blank" rel="noreferrer">
+          <div class="social-top">
+            <img class="avatar-img" src="assets/social/passeiodelancha-avatar.png" alt="Foto de perfil de Passeio de Lancha no Guarujá no Instagram" width="256" height="256" loading="lazy" decoding="async" />
+            <span class="who"><p>Passeio de Lancha no Guarujá</p><span>@passeiodelanchanoguaruja</span></span>
+            <svg class="ig-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          </div>
+          <div class="tiles" style="--ar:0.791">
+            <div class="tile"><img src="assets/social/passeiodelancha-post-1.webp" alt="Arte criada para Passeio de Lancha no Guarujá" width="470" height="596" loading="lazy" decoding="async" /></div>
+            <div class="tile"><img src="assets/social/passeiodelancha-post-2.webp" alt="Arte criada para Passeio de Lancha no Guarujá" width="471" height="593" loading="lazy" decoding="async" /></div>
+          </div>
+          <div class="social-foot"><p>Turismo e experiências</p><span>Ver perfil <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></span></div>
+        </a>
+
+        <a class="social-card group reveal" href="https://www.instagram.com/qrvrastreamento/" target="_blank" rel="noreferrer" style="transition-delay:90ms">
+          <div class="social-top">
+            <img class="avatar-img" src="assets/social/qrv-avatar.png" alt="Foto de perfil de QRV Rastreamento no Instagram" width="256" height="256" loading="lazy" decoding="async" />
+            <span class="who"><p>QRV Rastreamento</p><span>@qrvrastreamento</span></span>
+            <svg class="ig-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          </div>
+          <div class="tiles" style="--ar:0.996">
+            <div class="tile"><img src="assets/social/qrv-post-1.webp" alt="Arte criada para QRV Rastreamento" width="586" height="590" loading="lazy" decoding="async" /></div>
+            <div class="tile"><img src="assets/social/qrv-post-2.webp" alt="Arte criada para QRV Rastreamento" width="594" height="595" loading="lazy" decoding="async" /></div>
+          </div>
+          <div class="social-foot"><p>Segurança veicular</p><span>Ver perfil <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></span></div>
+        </a>
+
+        <a class="social-card group reveal" href="https://www.instagram.com/lia.seg.br/" target="_blank" rel="noreferrer" style="transition-delay:180ms">
+          <div class="social-top">
+            <img class="avatar-img" src="assets/social/lia-avatar.png" alt="Foto de perfil de Lia Seguros no Instagram" width="256" height="256" loading="lazy" decoding="async" />
+            <span class="who"><p>Lia Seguros</p><span>@lia.seg.br</span></span>
+            <svg class="ig-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          </div>
+          <div class="tiles" style="--ar:0.998">
+            <div class="tile"><img src="assets/social/lia-post-1.webp" alt="Arte criada para Lia Seguros" width="592" height="594" loading="lazy" decoding="async" /></div>
+            <div class="tile"><img src="assets/social/lia-post-2.webp" alt="Arte criada para Lia Seguros" width="594" height="594" loading="lazy" decoding="async" /></div>
+          </div>
+          <div class="social-foot"><p>Seguros e consultoria</p><span>Ver perfil <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GOOGLE ============ -->
+  <section id="google" class="google-sec">
+    <div class="wrap reveal">
+      <div class="google-grid">
+        <div>
+          <div class="g-box">G</div>
+          <p class="eyebrow">Presença local</p>
+          <h2 class="display-type">Especialista em Google Meu Negócio.</h2>
+        </div>
+        <div>
+          <p>Criação, gerenciamento e atualização de perfis para sua empresa aparecer com informações corretas nas buscas e no Google Maps.</p>
+          <div class="chips"><span class="chip">Criação</span><span class="chip">Gerenciamento</span><span class="chip">Atualizações</span></div>
+        </div>
+      </div>
+
+      <div class="g-lead">
+        <h3>O que é e para que serve</h3>
+        <p>O Google Meu Negócio é a ficha gratuita da sua empresa dentro do Google. É ela que aparece com endereço, telefone, horário, fotos e avaliações quando alguém procura pelo seu serviço — e é ela que coloca o seu negócio no Google Maps.</p>
+        <p>Na prática, é a sua vitrine na hora da decisão: funciona para quem tem loja, escritório ou atende na rua. Sem ficha, ou com a ficha desatualizada, o seu negócio até existe — mas não é encontrado, não é comparado e não é escolhido.</p>
+      </div>
+
+      <div class="g-args">
+        <div class="g-arg">
+          <span>01</span>
+          <h3>Quem não aparece, não é escolhido</h3>
+          <p>A pessoa digita o serviço e a cidade, olha os primeiros resultados e liga. Na pressa de quem precisa resolver um problema hoje, não existe prêmio para o segundo colocado.</p>
+        </div>
+        <div class="g-arg">
+          <span>02</span>
+          <h3>Sua ficha é a primeira impressão</h3>
+          <p>Fotos, horário, telefone e avaliações dizem em cinco segundos se você transmite confiança. Ficha desatualizada manda a pior mensagem possível: a de que o negócio pode ter fechado.</p>
+        </div>
+        <div class="g-arg">
+          <span>03</span>
+          <h3>Avaliação é boca a boca público</h3>
+          <p>Cada comentário é uma indicação que continua exposta para todo mundo que pesquisar amanhã. Responder bem a uma crítica vale mais do que qualquer postagem.</p>
+        </div>
+        <div class="g-arg">
+          <span>04</span>
+          <h3>O Maps entrega quem já decidiu</h3>
+          <p>A busca local tem intenção: quem procura no celular costuma ligar ou visitar no mesmo dia. É a única frente que alcança a pessoa no segundo exato em que ela precisa de você.</p>
+        </div>
+      </div>
+
+      <p class="g-fecho">Presença online não é vaidade: é estar disponível na hora em que o cliente decide. Quem não está lá, entrega essa decisão de bandeja para o concorrente.</p>
+        <div class="cta-inline"><a class="link-inline-dark" href="https://wa.me/5541984542307?text=Ol%C3%A1%20Daniel%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener noreferrer nofollow">Quer sua empresa aparecendo nas buscas? Falar no WhatsApp <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a></div>
+    </div>
+  </section>
+
+  <!-- ============ SOBRE MIM ============ -->
+  <section id="sobre" class="sec" style="border-top:1px solid var(--line)">
+    <div class="wrap sobre-grid">
+      <div class="reveal">
+        <img class="selo" src="assets/favicon-192.png" alt="" width="192" height="192" loading="lazy" decoding="async" />
+        <p class="eyebrow">Sobre mim</p>
+        <h2 class="display-type" style="margin:0;font-size:2.25rem;line-height:1.05">Deixa eu me apresentar.</h2>
+        <div class="assinatura">Daniel Soberanis <small>Curitiba · PR</small></div>
+      </div>
+
+      <div class="sobre-texto reveal" style="transition-delay:80ms">
+        <p>São mais de vinte anos trabalhando com comunicação visual, tecnologia e internet. Tempo suficiente para ver moda passar, ferramenta morrer e promessa de resultado fácil não se sustentar.</p>
+        <p>Comecei no design gráfico, quando a entrega ainda era impressa. Depois vieram os sites, as redes sociais, a busca local, o Google Meu Negócio. Eu acompanhei cada uma dessas mudanças de perto — não por curiosidade, mas porque quem trabalha com presença digital não pode chegar atrasado.</p>
+        <p>Hoje uso inteligência artificial no meu processo, e não para substituir o trabalho: uso para acelerar o que é repetitivo e sobrar tempo para o que realmente decide um projeto — entender o seu negócio, escolher a mensagem e construir algo que você reconheça como seu.</p>
+        <p>Não trabalho com fórmula pronta nem com site de modelo. Todo projeto começa pela mesma pergunta: <em style="color:var(--foreground);font-style:normal">o que o seu cliente precisa ver para confiar em você?</em> O resto — layout, texto, estrutura, busca local — é consequência dessa resposta.</p>
+        <p>E tem uma coisa prática: você fala direto com quem executa. Sem briefing passando por três mãos, sem sumiço no meio do caminho. Se você chegou até aqui, provavelmente já sabe que precisa de um site — o que talvez ainda não saiba é que dá para resolver isso de forma simples, sem mistério e sem precisar de orçamento de agência.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTATO ============ -->
+  <section id="contato" class="contato-sec">
+    <div class="wrap reveal">
+      <p class="eyebrow" style="margin-bottom:1.5rem">Seu próximo projeto</p>
+      <h2>Vamos criar algo que represente bem o seu negócio?</h2>
+      <div class="cta-row">
+        <a class="btn btn-solid" href="https://wa.me/5541984542307?text=Ol%C3%A1%20Daniel%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener noreferrer nofollow" aria-label="Conversar no WhatsApp">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/></svg>
+          Conversar no WhatsApp
+        </a>
+        <a class="btn btn-outline" href="/cdn-cgi/l/email-protection#c7a3a6a9b4a8a5a2b5a6a9aeb487a0aaa6aeabe9a4a8aaf8b4b2a5ada2a4b3fa89a8b1a8e2f5f7b7b5a8ada2b3a8" rel="nofollow" aria-label="Enviar um e-mail">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+          Enviar um e-mail
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <img src="assets/logo-ds-light.png" alt="Daniel Soberanis Web Design" width="680" height="241" />
+    <p>© 2026 Daniel Soberanis</p>
+    <p>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+      Curitiba, Brasil
+    </p>
+  </div>
+</footer>
+
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  // Header: transparente sobre o hero, solido ao rolar
+  (function () {
+    var header = document.querySelector('.site-header');
+    var menu = document.getElementById('mobileMenu');
+    if (!header) return;
+    var pend = null;
+    function estado() {
+      pend = null;
+      var solido = (window.pageYOffset || document.documentElement.scrollTop || 0) > 40
+                   || (menu && menu.classList.contains('open'));
+      header.classList.toggle('is-solid', solido);
+    }
+    window.addEventListener('scroll', function () { if (!pend) pend = requestAnimationFrame(estado); }, { passive: true });
+    if (menu) menu.addEventListener('click', estado);
+    estado();
+  })();
+
+  // Menu mobile
+  (function () {
+    var btn = document.getElementById('menuBtn');
+    var menu = document.getElementById('mobileMenu');
+    if (!btn || !menu) return;
+    btn.addEventListener('click', function () {
+      var open = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      btn.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+    });
+    menu.addEventListener('click', function (e) {
+      if (e.target.tagName === 'A') {
+        menu.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  })();
+
+  // Hero: luz que segue o cursor + paralaxe no scroll
+  (function () {
+    var hero = document.querySelector('.hero');
+    if (!hero) return;
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+    if (fine && !reduce) {
+      var mx = 50, my = 40, tx = 50, ty = 40, raf = null;
+      function loop() {
+        mx += (tx - mx) * 0.12; my += (ty - my) * 0.12;
+        hero.style.setProperty('--mx', mx.toFixed(2));
+        hero.style.setProperty('--my', my.toFixed(2));
+        raf = (Math.abs(tx - mx) > 0.15 || Math.abs(ty - my) > 0.15) ? requestAnimationFrame(loop) : null;
+      }
+      hero.addEventListener('pointermove', function (e) {
+        var r = hero.getBoundingClientRect();
+        tx = (e.clientX - r.left) / r.width * 100;
+        ty = (e.clientY - r.top) / r.height * 100;
+        hero.classList.add('lit');
+        if (!raf) raf = requestAnimationFrame(loop);
+      }, { passive: true });
+      hero.addEventListener('pointerleave', function () { hero.classList.remove('lit'); });
+    }
+
+    if (!reduce) {
+      var pend = null;
+      function pintar() {
+        pend = null;
+        var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+        var vh = window.innerHeight || 800;
+        if (y > vh * 1.3) return;
+        hero.style.setProperty('--p', Math.min(y / (vh * 0.85), 1).toFixed(4));
+      }
+      window.addEventListener('scroll', function () { if (!pend) pend = requestAnimationFrame(pintar); }, { passive: true });
+      pintar();
+    }
+  })();
+
+  // Reveal on scroll (equivalente ao data-reveal do build original)
+  (function () {
+    var els = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window) ||
+        window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      els.forEach(function (el) { el.classList.add('is-in'); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: '0px 0px -10% 0px', threshold: 0.06 });
+    els.forEach(function (el) { io.observe(el); });
+  })();
+</script>
+
+<!-- ============ BOTAO FLUTUANTE (WhatsApp) ============ -->
+<a class="wa-float" id="waFloat" href="https://wa.me/5541984542307?text=Ol%C3%A1%20Daniel%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener noreferrer nofollow"
+   aria-label="Falar no WhatsApp com Daniel Soberanis" aria-hidden="true" tabindex="-1">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/></svg>
+  <span>Falar no WhatsApp</span>
+</a>
+
+<script>
+/* Painéis 3 e 4 do hero só no desktop: no mobile eles ficam escondidos,
+   então não faz sentido o celular baixar ~250 KB que não vai mostrar. */
+(function () {
+  if (window.innerWidth > 900) {
+    document.querySelectorAll('.panel img[data-src]').forEach(function (img) {
+      img.src = img.getAttribute('data-src');
+      img.removeAttribute('data-src');
+    });
+  }
+})();
+
+/* Botão flutuante: aparece depois da primeira dobra, e recolhe quando a
+   seção de contato entra na tela para não competir com os botões dela. */
+(function () {
+  var btn = document.getElementById('waFloat');
+  if (!btn) return;
+  var hero = document.querySelector('.hero');
+  var contato = document.getElementById('contato');
+  var visivel = false;
+  function atualizar() {
+    var y = window.scrollY || window.pageYOffset || 0;
+    var limite = (hero ? hero.offsetHeight : window.innerHeight) * 0.6;
+    var noContato = contato && contato.getBoundingClientRect().top < window.innerHeight * 0.85;
+    var deve = y > limite && !noContato;
+    if (deve !== visivel) {
+      visivel = deve;
+      btn.classList.toggle('is-on', deve);
+      btn.setAttribute('aria-hidden', deve ? 'false' : 'true');
+      btn.tabIndex = deve ? 0 : -1;
+    }
+  }
+  var agendado = false;
+  function onScroll() {
+    if (agendado) return;
+    agendado = true;
+    requestAnimationFrame(function () { agendado = false; atualizar(); });
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  atualizar();
+})();
+</script>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a3fad04a8d4d480d',t:'MTc5MDE3OTc2NA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
