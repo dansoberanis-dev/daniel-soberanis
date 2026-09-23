@@ -12,24 +12,24 @@
 <meta name="geo.placename" content="Curitiba, Paraná" />
 
 <!-- ===== COMPARTILHAMENTO (WhatsApp, Instagram, Facebook, LinkedIn) =====
-     Os enderecos absolutos usam o token __SITE_URL__. Antes de publicar, rode:
+     Os enderecos absolutos usam o token https://daniel-soberanis.vercel.app. Antes de publicar, rode:
          python3 deploy/preparar.py https://seu-endereco.vercel.app
      Isso grava a URL final no canonical, no og:url e nas imagens. -->
-<link rel="canonical" href="__SITE_URL__/" />
+<link rel="canonical" href="https://daniel-soberanis.vercel.app/" />
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="pt_BR" />
 <meta property="og:site_name" content="Daniel Soberanis" />
 <meta property="og:title" content="Daniel Soberanis | Webdesigner e Especialista em Google Meu Negócio" />
 <meta property="og:description" content="Portfólio de Daniel Soberanis. Criação de sites profissionais, responsivos e otimizados para SEO, gestão de redes sociais e especialista em Google Meu Negócio." />
-<meta property="og:url" content="__SITE_URL__/" />
-<meta property="og:image" content="__SITE_URL__/assets/og-image.jpg" />
+<meta property="og:url" content="https://daniel-soberanis.vercel.app/" />
+<meta property="og:image" content="https://daniel-soberanis.vercel.app/assets/og-image.jpg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:image:alt" content="Daniel Soberanis — webdesigner e especialista em Google Meu Negócio" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Daniel Soberanis | Webdesigner e Especialista em Google Meu Negócio" />
 <meta name="twitter:description" content="Portfólio de Daniel Soberanis. Criação de sites profissionais, responsivos e otimizados para SEO, gestão de redes sociais e especialista em Google Meu Negócio." />
-<meta name="twitter:image" content="__SITE_URL__/assets/og-image.jpg" />
+<meta name="twitter:image" content="https://daniel-soberanis.vercel.app/assets/og-image.jpg" />
 
 <!-- ===== FAVICON (monograma recortado da sua logo) ===== -->
 <link rel="icon" href="assets/favicon.ico" sizes="any" />
@@ -316,6 +316,19 @@
   .case-step h3{margin:0 0 .625rem;font-family:var(--display);font-size:.8125rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--primary)}
   .case-step p{margin:0;font-size:.9375rem;line-height:1.7;color:var(--muted)}
   .case-note{margin:2.5rem 0 0;max-width:40rem;font-size:.8125rem;line-height:1.65;color:var(--muted)}
+  /* ---------- Case: fundo (orbitas + poeira, sutil) ---------- */
+  .case-sec .wrap{position:relative;z-index:2}
+  .case-layers{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+  .case-orbit-a{left:4%;top:14%;width:14rem;height:14rem;border:1px solid color-mix(in srgb,var(--primary) 22%,transparent);animation:spin 44s linear infinite}
+  .case-orbit-a::after{content:"";position:absolute;top:-4px;left:50%;width:8px;height:8px;margin-left:-4px;border-radius:50%;background:var(--primary);opacity:.5;box-shadow:0 0 14px 2px color-mix(in srgb,var(--primary) 40%,transparent)}
+  .case-orbit-b{left:16%;top:44%;width:10rem;height:10rem;border:1px dashed color-mix(in srgb,var(--foreground) 12%,transparent);animation:spin 64s linear infinite reverse}
+  .case-orbit-c{left:-5%;bottom:5%;width:16rem;height:16rem;border:1px solid color-mix(in srgb,var(--foreground) 7%,transparent);animation:spin 88s linear infinite}
+  @media (min-width:1024px){
+    .case-orbit-a{left:3%;top:12%;width:19rem;height:19rem}
+    .case-orbit-b{left:15%;top:46%;width:13rem;height:13rem}
+    .case-orbit-c{left:-6%;bottom:4%;width:22rem;height:22rem}
+  }
+  .case-layers .dust i{background:color-mix(in srgb,var(--primary) 55%,transparent)}
 
   /* ---------- Sobre mim ---------- */
   .sobre-grid{display:grid;gap:2.5rem}
@@ -392,7 +405,7 @@
   .site-footer{border-top:1px solid var(--line);padding:2rem var(--pad)}
   .site-footer .wrap{display:flex;flex-direction:column;gap:1.25rem;font-size:.75rem;color:var(--muted)}
   @media (min-width:640px){.site-footer .wrap{flex-direction:row;align-items:center;justify-content:space-between}}
-  .site-footer img{height:2rem;width:auto;opacity:.8}
+  .site-footer img{height:2rem;width:auto;align-self:flex-start;opacity:.8}
   .site-footer p{margin:0;display:flex;align-items:center;gap:.5rem}
 
   /* ---------- Reveal ---------- */
@@ -402,7 +415,7 @@
 
   @media (prefers-reduced-motion:reduce){
     html{scroll-behavior:auto}
-    .glow,.sheen,.orbit,.orbit-a,.orbit-b,.orbit-c,.hero-in,.scroll-cue svg,.dust i,.hero-media,.panel img{animation:none}
+    .glow,.sheen,.orbit,.orbit-a,.orbit-b,.orbit-c,.case-orbit-a,.case-orbit-b,.case-orbit-c,.hero-in,.scroll-cue svg,.dust i,.hero-media,.panel img{animation:none}
     .panel{transform:none;transition:none}
     .line > span{transform:none;animation:none}
     .hero .wrap,.par{transform:none;opacity:1}
@@ -420,9 +433,9 @@
   "@type": "ProfessionalService",
   "name": "Daniel Soberanis",
   "description": "Criação de sites profissionais, gestão de redes sociais e especialista em Google Meu Negócio.",
-  "url": "__SITE_URL__/",
-  "logo": "__SITE_URL__/assets/og-image.jpg",
-  "image": "__SITE_URL__/assets/og-image.jpg",
+  "url": "https://daniel-soberanis.vercel.app/",
+  "logo": "https://daniel-soberanis.vercel.app/assets/og-image.jpg",
+  "image": "https://daniel-soberanis.vercel.app/assets/og-image.jpg",
   "areaServed": [{"@type": "City", "name": "Curitiba"}, {"@type": "State", "name": "Paraná"}],
   "address": {"@type": "PostalAddress", "addressLocality": "Curitiba", "addressRegion": "PR", "addressCountry": "BR"},
   "priceRange": "$$",
@@ -663,6 +676,25 @@
 
   <!-- ============ CASE (dor -> solucao -> resultado) ============ -->
   <section id="case" class="sec case-sec">
+    <div class="case-layers" aria-hidden="true">
+      <div class="orbit case-orbit-a"></div>
+      <div class="orbit case-orbit-b"></div>
+      <div class="orbit case-orbit-c"></div>
+      <div class="dust">
+        <i style="left:6%;width:3px;height:3px;animation-duration:24s;animation-delay:-2s"></i>
+        <i style="left:13%;width:4px;height:4px;animation-duration:30s;animation-delay:-11s"></i>
+        <i style="left:21%;width:3px;height:3px;animation-duration:20s;animation-delay:-6s"></i>
+        <i style="left:29%;width:5px;height:5px;animation-duration:33s;animation-delay:-17s"></i>
+        <i style="left:38%;width:3px;height:3px;animation-duration:26s;animation-delay:-9s"></i>
+        <i style="left:47%;width:4px;height:4px;animation-duration:22s;animation-delay:-3s"></i>
+        <i style="left:55%;width:3px;height:3px;animation-duration:29s;animation-delay:-14s"></i>
+        <i style="left:63%;width:5px;height:5px;animation-duration:21s;animation-delay:-7s"></i>
+        <i style="left:71%;width:3px;height:3px;animation-duration:31s;animation-delay:-19s"></i>
+        <i style="left:79%;width:4px;height:4px;animation-duration:25s;animation-delay:-4s"></i>
+        <i style="left:87%;width:3px;height:3px;animation-duration:27s;animation-delay:-12s"></i>
+        <i style="left:94%;width:4px;height:4px;animation-duration:32s;animation-delay:-8s"></i>
+      </div>
+    </div>
     <div class="wrap">
       <div class="case-grid">
         <div class="reveal">
@@ -685,7 +717,6 @@
             <div class="case-step"><h3>O que muda</h3><p>O cliente passa a chegar informado. Menos tempo explicando, mais tempo fechando — e uma presença que não desaparece na próxima vez que o algoritmo mudar de ideia.</p></div>
           </div>
 
-          <p class="case-note">Relato ilustrativo, escrito a partir de situações reais de quem atende bem e mesmo assim não é encontrado. Assim que eu tiver depoimentos publicados, eles entram aqui no lugar deste texto.</p>
         </div>
       </div>
     </div>
@@ -696,7 +727,7 @@
     <div class="wrap">
       <div class="conv-head reveal">
         <p class="eyebrow">O custo de não ter um site</p>
-        <h2 class="display-type">Instagram é vitrine alugada. <span class="text-stroke">Site é terreno próprio.</span></h2>
+        <h2 class="display-type">Instagram é vitrine alugada.<br><span class="text-stroke">Site é terreno próprio.</span></h2>
         <p class="conv-lead">Você posta, cuida do visual e responde todo mundo — e ainda assim depende de um algoritmo que muda a regra sem avisar. Enquanto isso, tem gente no Google agora mesmo digitando exatamente o serviço que você entrega. O site é onde essa pessoa te encontra, te avalia e decide te chamar. Sem ele, ela liga para o concorrente que apareceu no seu lugar.</p>
       </div>
 
@@ -927,7 +958,7 @@
           <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/></svg>
           Conversar no WhatsApp
         </a>
-        <a class="btn btn-outline" href="/cdn-cgi/l/email-protection#c7a3a6a9b4a8a5a2b5a6a9aeb487a0aaa6aeabe9a4a8aaf8b4b2a5ada2a4b3fa89a8b1a8e2f5f7b7b5a8ada2b3a8" rel="nofollow" aria-label="Enviar um e-mail">
+        <a class="btn btn-outline" href="mailto:dansoberanis@gmail.com?subject=Novo%20projeto" rel="nofollow" aria-label="Enviar um e-mail">
           <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
           Enviar um e-mail
         </a>
@@ -948,7 +979,7 @@
 </footer>
 
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   // Header: transparente sobre o hero, solido ao rolar
   (function () {
     var header = document.querySelector('.site-header');
@@ -1093,5 +1124,5 @@
   atualizar();
 })();
 </script>
-<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a3fad04a8d4d480d',t:'MTc5MDE3OTc2NA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</body>
 </html>
