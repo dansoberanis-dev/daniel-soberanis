@@ -301,7 +301,28 @@
   .wa-float:hover{transform:translateY(-3px)}
 
   /* ---------- Case ilustrativo ---------- */
-  .case-sec{background:var(--surface);border-top:1px solid var(--line)}
+  .case-sec{position:relative;overflow:hidden;background:var(--surface);border-top:1px solid var(--line)}
+  .case-sec>.wrap{position:relative;z-index:1}
+  .case-luz{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+  /* auroras do caso: mesma linguagem do hero, concentradas a esquerda */
+  .glow-4{left:-12rem;top:-8%;width:24rem;height:24rem;
+    background:radial-gradient(circle,color-mix(in srgb,var(--primary) 26%,transparent),transparent 70%);
+    animation:drift1 26s ease-in-out infinite}
+  @media (min-width:768px){.glow-4{left:-10rem;top:-6%;width:40rem;height:40rem}}
+  .glow-5{bottom:-18%;left:16%;width:20rem;height:20rem;
+    background:radial-gradient(circle,color-mix(in srgb,var(--foreground) 12%,transparent),transparent 70%);
+    animation:drift3 34s ease-in-out infinite}
+  @media (min-width:768px){.glow-5{width:30rem;height:30rem}}
+  /* circulos em movimento */
+  .orbit-d{left:-8%;top:14%;width:13rem;height:13rem;
+    border:1px solid color-mix(in srgb,var(--primary) 22%,transparent);animation:spin 44s linear infinite}
+  .orbit-d::after{content:"";position:absolute;top:-5px;left:50%;width:9px;height:9px;margin-left:-4.5px;
+    border-radius:50%;background:var(--primary);
+    box-shadow:0 0 18px 3px color-mix(in srgb,var(--primary) 55%,transparent)}
+  @media (min-width:768px){.orbit-d{width:24rem;height:24rem}}
+  .orbit-e{left:2%;top:26%;width:18rem;height:18rem;
+    border:1px dashed color-mix(in srgb,var(--foreground) 10%,transparent);animation:spin 68s linear infinite reverse}
+  @media (min-width:768px){.orbit-e{width:32rem;height:32rem}}
   .case-grid{display:grid;gap:2.5rem}
   @media (min-width:1024px){.case-grid{grid-template-columns:1fr 1.1fr;gap:4rem;align-items:start}}
   .case-quote{margin:0;font-family:var(--display);font-weight:500;font-size:1.25rem;line-height:1.55}
@@ -676,6 +697,33 @@
 
   <!-- ============ CASE (dor -> solucao -> resultado) ============ -->
   <section id="case" class="sec case-sec">
+    <div class="case-luz" aria-hidden="true">
+      <div class="par par-mid">
+        <div class="glow glow-4"></div>
+        <div class="glow glow-5"></div>
+        <div class="orbit orbit-d"></div>
+        <div class="orbit orbit-e"></div>
+      </div>
+      <div class="par par-fast">
+        <div class="dust">
+              <i style="left:5%;width:4px;height:4px;animation-duration:22s;animation-delay:-0s"></i>
+              <i style="left:11%;width:3px;height:3px;animation-duration:28s;animation-delay:-5s"></i>
+              <i style="left:17%;width:5px;height:5px;animation-duration:19s;animation-delay:-11s"></i>
+              <i style="left:23%;width:4px;height:4px;animation-duration:31s;animation-delay:-2s"></i>
+              <i style="left:29%;width:3px;height:3px;animation-duration:25s;animation-delay:-14s"></i>
+              <i style="left:35%;width:4px;height:4px;animation-duration:21s;animation-delay:-7s"></i>
+              <i style="left:41%;width:5px;height:5px;animation-duration:30s;animation-delay:-1s"></i>
+              <i style="left:47%;width:3px;height:3px;animation-duration:24s;animation-delay:-16s"></i>
+              <i style="left:53%;width:4px;height:4px;animation-duration:27s;animation-delay:-9s"></i>
+              <i style="left:59%;width:4px;height:4px;animation-duration:20s;animation-delay:-4s"></i>
+              <i style="left:65%;width:3px;height:3px;animation-duration:33s;animation-delay:-12s"></i>
+              <i style="left:71%;width:4px;height:4px;animation-duration:23s;animation-delay:-6s"></i>
+              <i style="left:77%;width:5px;height:5px;animation-duration:29s;animation-delay:-15s"></i>
+              <i style="left:83%;width:3px;height:3px;animation-duration:26s;animation-delay:-3s"></i>
+              <i style="left:89%;width:4px;height:4px;animation-duration:32s;animation-delay:-10s"></i>
+        </div>
+      </div>
+    </div>
     <div class="wrap">
       <div class="case-grid">
         <div class="reveal">
@@ -709,7 +757,7 @@
     <div class="wrap">
       <div class="conv-head reveal">
         <p class="eyebrow">O custo de não ter um site</p>
-        <h2 class="display-type">Instagram é vitrine alugada. <span class="text-stroke">Site é terreno próprio.</span></h2>
+        <h2 class="display-type">Instagram é vitrine alugada.<br /><span class="text-stroke">Site é terreno próprio.</span></h2>
         <p class="conv-lead">Você posta, cuida do visual e responde todo mundo — e ainda assim depende de um algoritmo que muda a regra sem avisar. Enquanto isso, tem gente no Google agora mesmo digitando exatamente o serviço que você entrega. O site é onde essa pessoa te encontra, te avalia e decide te chamar. Sem ele, ela liga para o concorrente que apareceu no seu lugar.</p>
       </div>
 
