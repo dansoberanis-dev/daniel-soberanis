@@ -316,19 +316,6 @@
   .case-step h3{margin:0 0 .625rem;font-family:var(--display);font-size:.8125rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--primary)}
   .case-step p{margin:0;font-size:.9375rem;line-height:1.7;color:var(--muted)}
   .case-note{margin:2.5rem 0 0;max-width:40rem;font-size:.8125rem;line-height:1.65;color:var(--muted)}
-  /* ---------- Case: fundo (orbitas + poeira, sutil) ---------- */
-  .case-sec .wrap{position:relative;z-index:2}
-  .case-layers{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}
-  .case-orbit-a{left:4%;top:14%;width:14rem;height:14rem;border:1px solid color-mix(in srgb,var(--primary) 22%,transparent);animation:spin 44s linear infinite}
-  .case-orbit-a::after{content:"";position:absolute;top:-4px;left:50%;width:8px;height:8px;margin-left:-4px;border-radius:50%;background:var(--primary);opacity:.5;box-shadow:0 0 14px 2px color-mix(in srgb,var(--primary) 40%,transparent)}
-  .case-orbit-b{left:16%;top:44%;width:10rem;height:10rem;border:1px dashed color-mix(in srgb,var(--foreground) 12%,transparent);animation:spin 64s linear infinite reverse}
-  .case-orbit-c{left:-5%;bottom:5%;width:16rem;height:16rem;border:1px solid color-mix(in srgb,var(--foreground) 7%,transparent);animation:spin 88s linear infinite}
-  @media (min-width:1024px){
-    .case-orbit-a{left:3%;top:12%;width:19rem;height:19rem}
-    .case-orbit-b{left:15%;top:46%;width:13rem;height:13rem}
-    .case-orbit-c{left:-6%;bottom:4%;width:22rem;height:22rem}
-  }
-  .case-layers .dust i{background:color-mix(in srgb,var(--primary) 55%,transparent)}
 
   /* ---------- Sobre mim ---------- */
   .sobre-grid{display:grid;gap:2.5rem}
@@ -405,17 +392,18 @@
   .site-footer{border-top:1px solid var(--line);padding:2rem var(--pad)}
   .site-footer .wrap{display:flex;flex-direction:column;gap:1.25rem;font-size:.75rem;color:var(--muted)}
   @media (min-width:640px){.site-footer .wrap{flex-direction:row;align-items:center;justify-content:space-between}}
-  .site-footer img{height:2rem;width:auto;align-self:flex-start;opacity:.8}
+  .site-footer img{height:2rem;width:auto;opacity:.8}
   .site-footer p{margin:0;display:flex;align-items:center;gap:.5rem}
 
   /* ---------- Reveal ---------- */
   .reveal{opacity:0;transform:translateY(2rem);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
   .reveal.is-in{opacity:1;transform:none}
 
+  /* ---------- Nota do preview ---------- */
 
   @media (prefers-reduced-motion:reduce){
     html{scroll-behavior:auto}
-    .glow,.sheen,.orbit,.orbit-a,.orbit-b,.orbit-c,.case-orbit-a,.case-orbit-b,.case-orbit-c,.hero-in,.scroll-cue svg,.dust i,.hero-media,.panel img{animation:none}
+    .glow,.sheen,.orbit,.orbit-a,.orbit-b,.orbit-c,.hero-in,.scroll-cue svg,.dust i,.hero-media,.panel img{animation:none}
     .panel{transform:none;transition:none}
     .line > span{transform:none;animation:none}
     .hero .wrap,.par{transform:none;opacity:1}
@@ -499,10 +487,10 @@
     <div class="hero-layers" aria-hidden="true">
       <div class="hero-media" aria-hidden="true"></div>
       <div class="hero-panels" aria-hidden="true">
-        <div class="panel panel-1"><img src="assets/hero-panel-1.webp" alt="" width="760" height="613" /></div>
-        <div class="panel panel-2"><img src="assets/hero-panel-2.webp" alt="" width="760" height="486" /></div>
+        <div class="panel panel-1"><img src="assets/hero-panel-1.webp" alt="" width="640" height="516" /></div>
+        <div class="panel panel-2"><img src="assets/hero-panel-2.webp" alt="" width="640" height="409" /></div>
         <div class="panel panel-3"><img data-src="assets/hero-panel-3.webp" alt="" width="594" height="649" /></div>
-        <div class="panel panel-4"><img data-src="assets/hero-panel-4.webp" alt="" width="760" height="543" /></div>
+        <div class="panel panel-4"><img data-src="assets/hero-panel-4.webp" alt="" width="640" height="457" /></div>
       </div>
       <div class="par par-slow">
         <div class="hero-topglow"></div>
@@ -565,98 +553,110 @@
 
       <div class="trabalhos-grid">
         <article class="group reveal">
-          <a href="https://www.jabseventos.com.br" target="_blank" rel="noreferrer" aria-label="Visitar Jab’s Eventos">
+          <a href="https://sambadocassin.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Visitar Samba do Cassin">
+            <div class="card">
+              <div class="chrome"><i></i><i></i><i></i><span>sambadocassin.vercel.app</span></div>
+              <div class="shot"><img src="assets/projetos/sambadocassin-wide.jpg" alt="Página inicial do projeto Samba do Cassin" width="1200" height="675" loading="eager" decoding="async" /></div>
+            </div>
+            <div class="card-meta">
+              <div><p class="cat">01 · Música e agenda de shows</p><h3 class="display-type">Samba do Cassin</h3></div>
+              <svg class="arrow-up" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+            </div>
+          </a>
+        </article>
+<article class="group reveal">
+          <a href="https://www.jabseventos.com.br" target="_blank" rel="noopener noreferrer" aria-label="Visitar Jab’s Eventos">
             <div class="card">
               <div class="chrome"><i></i><i></i><i></i><span>www.jabseventos.com.br</span></div>
               <div class="shot"><img src="assets/projetos/jabs-wide.jpg" alt="Página inicial do projeto Jab’s Eventos" width="1200" height="675" loading="eager" decoding="async" /></div>
             </div>
             <div class="card-meta">
-              <div><p class="cat">01 · Eventos e audiovisual</p><h3 class="display-type">Jab’s Eventos</h3></div>
+              <div><p class="cat">02 · Eventos e audiovisual</p><h3 class="display-type">Jab’s Eventos</h3></div>
               <svg class="arrow-up" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
             </div>
           </a>
         </article>
 
         <article class="group reveal" style="transition-delay:60ms">
-          <a href="https://www.dgeventoscorporativos.com.br" target="_blank" rel="noreferrer" aria-label="Visitar DG Eventos Corporativos">
+          <a href="https://www.dgeventoscorporativos.com.br" target="_blank" rel="noopener noreferrer" aria-label="Visitar DG Eventos Corporativos">
             <div class="card">
               <div class="chrome"><i></i><i></i><i></i><span>www.dgeventoscorporativos.com.br</span></div>
               <div class="shot"><img src="assets/projetos/dg-wide.jpg" alt="Página inicial do projeto DG Eventos Corporativos" width="1200" height="675" loading="eager" decoding="async" /></div>
             </div>
             <div class="card-meta">
-              <div><p class="cat">02 · Eventos corporativos</p><h3 class="display-type">DG Eventos Corporativos</h3></div>
+              <div><p class="cat">03 · Eventos corporativos</p><h3 class="display-type">DG Eventos Corporativos</h3></div>
               <svg class="arrow-up" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
             </div>
           </a>
         </article>
 
         <article class="group reveal">
-          <a href="https://www.fernandeseventos.com.br" target="_blank" rel="noreferrer" aria-label="Visitar Fernandes Eventos">
+          <a href="https://www.fernandeseventos.com.br" target="_blank" rel="noopener noreferrer" aria-label="Visitar Fernandes Eventos">
             <div class="card">
               <div class="chrome"><i></i><i></i><i></i><span>www.fernandeseventos.com.br</span></div>
               <div class="shot"><img src="assets/projetos/fernandes-wide.jpg" alt="Página inicial do projeto Fernandes Eventos" width="1200" height="675" loading="lazy" decoding="async" /></div>
             </div>
             <div class="card-meta">
-              <div><p class="cat">03 · Produção de eventos</p><h3 class="display-type">Fernandes Eventos</h3></div>
+              <div><p class="cat">04 · Produção de eventos</p><h3 class="display-type">Fernandes Eventos</h3></div>
               <svg class="arrow-up" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
             </div>
           </a>
         </article>
 
         <article class="group reveal" style="transition-delay:60ms">
-          <a href="https://www.revistacasanova.com.br" target="_blank" rel="noreferrer" aria-label="Visitar Revista Casa Nova">
+          <a href="https://www.revistacasanova.com.br" target="_blank" rel="noopener noreferrer" aria-label="Visitar Revista Casa Nova">
             <div class="card">
               <div class="chrome"><i></i><i></i><i></i><span>www.revistacasanova.com.br</span></div>
               <div class="shot"><img src="assets/projetos/casa-nova-wide.jpg" alt="Página inicial do projeto Revista Casa Nova" width="1200" height="675" loading="lazy" decoding="async" /></div>
             </div>
             <div class="card-meta">
-              <div><p class="cat">04 · Portal editorial</p><h3 class="display-type">Revista Casa Nova</h3></div>
+              <div><p class="cat">05 · Portal editorial</p><h3 class="display-type">Revista Casa Nova</h3></div>
               <svg class="arrow-up" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
             </div>
           </a>
         </article>
 
         <article class="group reveal">
-          <a href="https://daniellebocchi-wine.vercel.app/" target="_blank" rel="noreferrer" aria-label="Visitar Danielle Bocchi">
+          <a href="https://daniellebocchi-wine.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Visitar Danielle Bocchi">
             <div class="card">
               <div class="chrome"><i></i><i></i><i></i><span>daniellebocchi-wine.vercel.app</span></div>
               <div class="shot"><img src="assets/projetos/danielle-wide.jpg" alt="Página inicial do projeto Danielle Bocchi" width="1200" height="675" loading="lazy" decoding="async" /></div>
             </div>
             <div class="card-meta">
-              <div><p class="cat">05 · Estética e saúde</p><h3 class="display-type">Danielle Bocchi</h3></div>
+              <div><p class="cat">06 · Estética e saúde</p><h3 class="display-type">Danielle Bocchi</h3></div>
               <svg class="arrow-up" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
             </div>
           </a>
         </article>
 
         <article class="group reveal" style="transition-delay:60ms">
-          <a href="https://www.multitoolbox.online" target="_blank" rel="noreferrer" aria-label="Visitar MultiToolbox">
+          <a href="https://www.multitoolbox.online" target="_blank" rel="noopener noreferrer" aria-label="Visitar MultiToolbox">
             <div class="card">
               <div class="chrome"><i></i><i></i><i></i><span>www.multitoolbox.online</span></div>
               <div class="shot"><img src="assets/projetos/multitoolbox-wide.jpg" alt="Página inicial do projeto MultiToolbox" width="1200" height="675" loading="lazy" decoding="async" /></div>
             </div>
             <div class="card-meta">
-              <div><p class="cat">06 · Plataforma de utilidades</p><h3 class="display-type">MultiToolbox</h3></div>
+              <div><p class="cat">07 · Plataforma de utilidades</p><h3 class="display-type">MultiToolbox</h3></div>
               <svg class="arrow-up" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
             </div>
           </a>
         </article>
 
         <article class="group reveal">
-          <a href="https://www.vdemetrio.com.br" target="_blank" rel="noreferrer" aria-label="Visitar VDemetrio">
+          <a href="https://www.vdemetrio.com.br" target="_blank" rel="noopener noreferrer" aria-label="Visitar VDemetrio">
             <div class="card">
               <div class="chrome"><i></i><i></i><i></i><span>www.vdemetrio.com.br</span></div>
               <div class="shot"><img src="assets/projetos/vdemetrio-wide.jpg" alt="Página inicial do projeto VDemetrio" width="1200" height="675" loading="lazy" decoding="async" /></div>
             </div>
             <div class="card-meta">
-              <div><p class="cat">07 · Locação audiovisual</p><h3 class="display-type">VDemetrio</h3></div>
+              <div><p class="cat">08 · Locação audiovisual</p><h3 class="display-type">VDemetrio</h3></div>
               <svg class="arrow-up" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
             </div>
           </a>
         </article>
 
         <article class="group reveal" style="transition-delay:60ms">
-          <a href="https://www.clickaudiovisual.com.br" target="_blank" rel="noreferrer" aria-label="Visitar Click Audiovisual">
+          <a href="https://www.clickaudiovisual.com.br" target="_blank" rel="noopener noreferrer" aria-label="Visitar Click Audiovisual">
             <div class="card">
               <div class="chrome"><i></i><i></i><i></i><span>www.clickaudiovisual.com.br</span></div>
               <div class="shot">
@@ -665,7 +665,7 @@
               </div>
             </div>
             <div class="card-meta">
-              <div><p class="cat">08 · Locação de equipamentos</p><h3 class="display-type">Click Audiovisual</h3></div>
+              <div><p class="cat">09 · Locação de equipamentos</p><h3 class="display-type">Click Audiovisual</h3></div>
               <svg class="arrow-up" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
             </div>
           </a>
@@ -676,25 +676,6 @@
 
   <!-- ============ CASE (dor -> solucao -> resultado) ============ -->
   <section id="case" class="sec case-sec">
-    <div class="case-layers" aria-hidden="true">
-      <div class="orbit case-orbit-a"></div>
-      <div class="orbit case-orbit-b"></div>
-      <div class="orbit case-orbit-c"></div>
-      <div class="dust">
-        <i style="left:6%;width:3px;height:3px;animation-duration:24s;animation-delay:-2s"></i>
-        <i style="left:13%;width:4px;height:4px;animation-duration:30s;animation-delay:-11s"></i>
-        <i style="left:21%;width:3px;height:3px;animation-duration:20s;animation-delay:-6s"></i>
-        <i style="left:29%;width:5px;height:5px;animation-duration:33s;animation-delay:-17s"></i>
-        <i style="left:38%;width:3px;height:3px;animation-duration:26s;animation-delay:-9s"></i>
-        <i style="left:47%;width:4px;height:4px;animation-duration:22s;animation-delay:-3s"></i>
-        <i style="left:55%;width:3px;height:3px;animation-duration:29s;animation-delay:-14s"></i>
-        <i style="left:63%;width:5px;height:5px;animation-duration:21s;animation-delay:-7s"></i>
-        <i style="left:71%;width:3px;height:3px;animation-duration:31s;animation-delay:-19s"></i>
-        <i style="left:79%;width:4px;height:4px;animation-duration:25s;animation-delay:-4s"></i>
-        <i style="left:87%;width:3px;height:3px;animation-duration:27s;animation-delay:-12s"></i>
-        <i style="left:94%;width:4px;height:4px;animation-duration:32s;animation-delay:-8s"></i>
-      </div>
-    </div>
     <div class="wrap">
       <div class="case-grid">
         <div class="reveal">
@@ -717,6 +698,7 @@
             <div class="case-step"><h3>O que muda</h3><p>O cliente passa a chegar informado. Menos tempo explicando, mais tempo fechando — e uma presença que não desaparece na próxima vez que o algoritmo mudar de ideia.</p></div>
           </div>
 
+          <p class="case-note">Relato ilustrativo, escrito a partir de situações reais de quem atende bem e mesmo assim não é encontrado. Assim que eu tiver depoimentos publicados, eles entram aqui no lugar deste texto.</p>
         </div>
       </div>
     </div>
@@ -727,7 +709,7 @@
     <div class="wrap">
       <div class="conv-head reveal">
         <p class="eyebrow">O custo de não ter um site</p>
-        <h2 class="display-type">Instagram é vitrine alugada.<br><span class="text-stroke">Site é terreno próprio.</span></h2>
+        <h2 class="display-type">Instagram é vitrine alugada. <span class="text-stroke">Site é terreno próprio.</span></h2>
         <p class="conv-lead">Você posta, cuida do visual e responde todo mundo — e ainda assim depende de um algoritmo que muda a regra sem avisar. Enquanto isso, tem gente no Google agora mesmo digitando exatamente o serviço que você entrega. O site é onde essa pessoa te encontra, te avalia e decide te chamar. Sem ele, ela liga para o concorrente que apareceu no seu lugar.</p>
       </div>
 
@@ -798,9 +780,9 @@
       </div>
 
       <div class="social-grid">
-        <a class="social-card group reveal" href="https://www.instagram.com/ufrogbrasil/" target="_blank" rel="noreferrer" style="--h:150;--s:70%;--l:45%">
+        <a class="social-card group reveal" href="https://www.instagram.com/ufrogbrasil/" target="_blank" rel="noopener noreferrer" style="--h:150;--s:70%;--l:45%">
           <div class="social-top">
-            <img class="avatar-img" src="assets/social/ufrog-avatar.png" alt="Foto de perfil de UFrog Brasil no Instagram" width="256" height="256" loading="lazy" decoding="async" />
+            <img class="avatar-img" src="assets/social/ufrog-avatar.webp" alt="Foto de perfil de UFrog Brasil no Instagram" width="128" height="128" loading="lazy" decoding="async" />
             <span class="who"><p>UFrog Brasil</p><span>@ufrogbrasil</span></span>
             <svg class="ig-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
           </div>
@@ -811,9 +793,9 @@
           <div class="social-foot"><p>Moda e lifestyle infantil</p><span>Ver perfil <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></span></div>
         </a>
 
-        <a class="social-card group reveal" href="https://www.instagram.com/wiggyoficial/" target="_blank" rel="noreferrer" style="transition-delay:90ms">
+        <a class="social-card group reveal" href="https://www.instagram.com/wiggyoficial/" target="_blank" rel="noopener noreferrer" style="transition-delay:90ms">
           <div class="social-top">
-            <img class="avatar-img" src="assets/social/wiggy-avatar.png" alt="Foto de perfil de Wiggy no Instagram" width="256" height="256" loading="lazy" decoding="async" />
+            <img class="avatar-img" src="assets/social/wiggy-avatar.webp" alt="Foto de perfil de Wiggy no Instagram" width="128" height="128" loading="lazy" decoding="async" />
             <span class="who"><p>Wiggy</p><span>@wiggyoficial</span></span>
             <svg class="ig-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
           </div>
@@ -824,9 +806,9 @@
           <div class="social-foot"><p>Moda e lifestyle</p><span>Ver perfil <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></span></div>
         </a>
 
-        <a class="social-card group reveal" href="https://www.instagram.com/jabseventos/" target="_blank" rel="noreferrer" style="transition-delay:180ms">
+        <a class="social-card group reveal" href="https://www.instagram.com/jabseventos/" target="_blank" rel="noopener noreferrer" style="transition-delay:180ms">
           <div class="social-top">
-            <img class="avatar-img" src="assets/social/jabs-avatar.png" alt="Foto de perfil de Jab's Eventos no Instagram" width="256" height="256" loading="lazy" decoding="async" />
+            <img class="avatar-img" src="assets/social/jabs-avatar.webp" alt="Foto de perfil de Jab's Eventos no Instagram" width="128" height="128" loading="lazy" decoding="async" />
             <span class="who"><p>Jab’s Eventos</p><span>@jabseventos</span></span>
             <svg class="ig-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
           </div>
@@ -837,9 +819,9 @@
           <div class="social-foot"><p>Audiovisual para eventos</p><span>Ver perfil <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></span></div>
         </a>
 
-        <a class="social-card group reveal" href="https://www.instagram.com/passeiodelanchanoguaruja/" target="_blank" rel="noreferrer">
+        <a class="social-card group reveal" href="https://www.instagram.com/passeiodelanchanoguaruja/" target="_blank" rel="noopener noreferrer">
           <div class="social-top">
-            <img class="avatar-img" src="assets/social/passeiodelancha-avatar.png" alt="Foto de perfil de Passeio de Lancha no Guarujá no Instagram" width="256" height="256" loading="lazy" decoding="async" />
+            <img class="avatar-img" src="assets/social/passeiodelancha-avatar.webp" alt="Foto de perfil de Passeio de Lancha no Guarujá no Instagram" width="128" height="128" loading="lazy" decoding="async" />
             <span class="who"><p>Passeio de Lancha no Guarujá</p><span>@passeiodelanchanoguaruja</span></span>
             <svg class="ig-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
           </div>
@@ -850,9 +832,9 @@
           <div class="social-foot"><p>Turismo e experiências</p><span>Ver perfil <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></span></div>
         </a>
 
-        <a class="social-card group reveal" href="https://www.instagram.com/qrvrastreamento/" target="_blank" rel="noreferrer" style="transition-delay:90ms">
+        <a class="social-card group reveal" href="https://www.instagram.com/qrvrastreamento/" target="_blank" rel="noopener noreferrer" style="transition-delay:90ms">
           <div class="social-top">
-            <img class="avatar-img" src="assets/social/qrv-avatar.png" alt="Foto de perfil de QRV Rastreamento no Instagram" width="256" height="256" loading="lazy" decoding="async" />
+            <img class="avatar-img" src="assets/social/qrv-avatar.webp" alt="Foto de perfil de QRV Rastreamento no Instagram" width="128" height="128" loading="lazy" decoding="async" />
             <span class="who"><p>QRV Rastreamento</p><span>@qrvrastreamento</span></span>
             <svg class="ig-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
           </div>
@@ -863,9 +845,9 @@
           <div class="social-foot"><p>Segurança veicular</p><span>Ver perfil <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></span></div>
         </a>
 
-        <a class="social-card group reveal" href="https://www.instagram.com/lia.seg.br/" target="_blank" rel="noreferrer" style="transition-delay:180ms">
+        <a class="social-card group reveal" href="https://www.instagram.com/lia.seg.br/" target="_blank" rel="noopener noreferrer" style="transition-delay:180ms">
           <div class="social-top">
-            <img class="avatar-img" src="assets/social/lia-avatar.png" alt="Foto de perfil de Lia Seguros no Instagram" width="256" height="256" loading="lazy" decoding="async" />
+            <img class="avatar-img" src="assets/social/lia-avatar.webp" alt="Foto de perfil de Lia Seguros no Instagram" width="128" height="128" loading="lazy" decoding="async" />
             <span class="who"><p>Lia Seguros</p><span>@lia.seg.br</span></span>
             <svg class="ig-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
           </div>
